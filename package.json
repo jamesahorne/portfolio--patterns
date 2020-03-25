@@ -1,0 +1,44 @@
+{
+  "name": "portfolio--patterns",
+  "version": "1.0.0",
+  "description": "jamesahorne.dev portfolio site's pattern library",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pl:build": "patternlab build --config ./patternlab-config.json",
+    "pl:help": "patternlab --help",
+    "pl:install": "patternlab install --config ./patternlab-config.json",
+    "pl:serve": "patternlab serve --config ./patternlab-config.json",
+    "pl:version": "patternlab --version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jamesahorne@github.com/jamesahorne/portfolio--patterns.git"
+  },
+  "author": "James Horne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamesahorne/portfolio--patterns/issues"
+  },
+  "homepage": "https://github.com/jamesahorne/portfolio--patterns#readme",
+  "dependencies": {
+    "@pattern-lab/cli": "^5.7.0",
+    "@pattern-lab/core": "^5.7.0",
+    "@pattern-lab/engine-handlebars": "^5.5.0",
+    "@pattern-lab/starterkit-handlebars-vanilla": "^1.4.0",
+    "@pattern-lab/uikit-workshop": "^5.7.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}

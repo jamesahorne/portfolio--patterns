@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+ * ABSTRACTS..............................Declarations of Sass variables & mixins
+ * BASE...................................Default element styles
+ * LAYOUT.................................Layout-specific styles
+ * COMPONENTS.............................Component styles
+ * UTILITIES..............................Utility classes
+ */
+
+/*------------------------------------*\
+    #ABSTRACTS
+\*------------------------------------*/
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/colors";
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+@import "base/reset";
+@import "base/body";
+@import "base/links";
+@import "base/lists";
+@import "base/headings";
+@import "base/forms";
+@import "base/buttons";
+@import "base/main";
+@import "base/media";
+@import "base/text";
+@import "base/table";
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+@import "layout/layout";
+
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+@import "utilities/visibility";
+@import "utilities/spacing";
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+@import "../_patterns/**/*.scss";
