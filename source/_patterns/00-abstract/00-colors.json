@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "name": "$color-neutral-white",
+      "value": "#fff"
+    },
+    {
+      "name": "$color-neutral-gray-02",
+      "value": "#f9f9f9"
+    },
+    {
+      "name": "$color-neutral-gray-07",
+      "value": "#eee"
+    },
+    {
+      "name": "$color-neutral-gray-13",
+      "value": "#ddd"
+    },
+    {
+      "name": "$color-neutral-gray-27",
+      "value": "#bbb"
+    },
+    {
+      "name": "$color-neutral-gray-50",
+      "value": "#808080"
+    },
+    {
+      "name": "$color-neutral-gray-60",
+      "value": "#666"
+    },
+    {
+      "name": "$color-neutral-gray-73",
+      "value": "#444"
+    },
+    {
+      "name": "$color-neutral-gray-93",
+      "value": "#131313"
+    },
+    {
+      "name": "$color-neutral-black",
+      "value": "#000"
+    }
+  ]
+}
