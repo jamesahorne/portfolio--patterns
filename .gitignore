@@ -1,4 +1,6 @@
-node_modules
-public
+node_modules/
+public/
+source/css/
+source/.DS_Store
 dependencyGraph.json
-helpers
+.DS_Store
