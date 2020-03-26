@@ -1,0 +1,19 @@
+.c-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.c-hero__title {
+  font-size: fontSize(2);
+  line-height: 1.3;
+  @include breakpoint($md) {
+    font-size: fontSize(3);
+  }
+  @include breakpoint($lg) {
+    font-size: fontSize(4);
+  }
+  span {
+    display: block;
+  }
+}
