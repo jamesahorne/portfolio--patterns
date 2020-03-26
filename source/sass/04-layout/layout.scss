@@ -1,0 +1,13 @@
+.l-main {
+  padding: 0 1rem;
+  @include breakpoint($sm) {
+    padding: 0 2rem;
+  }
+  @include breakpoint($md) {
+    padding: 0 4rem;
+  }
+  @include breakpoint($lg) {
+    margin: 0 auto;
+    max-width: 56rem;
+  }
+}
