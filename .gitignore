@@ -1,6 +1,6 @@
 node_modules/
 public/
 source/css/
-source/.DS_Store
+**/.DS_Store
 dependencyGraph.json
 .DS_Store
