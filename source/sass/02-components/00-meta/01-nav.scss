@@ -1,0 +1,39 @@
+.c-nav__list {
+  display: flex;
+}
+
+.c-nav__item {
+  margin-right: 0.75rem;
+  @include breakpoint(22) {
+    margin-right: 1rem;
+  }
+  @include breakpoint(24) {
+    font-size: fontSize(1);
+  }
+  @include breakpoint(25) {
+    margin-right: 1.5rem;
+  }
+  @include breakpoint($sm) {
+    font-size: fontSize(2);
+  }
+  @include breakpoint($md) {
+    margin-right: 2rem;
+  }
+  @include breakpoint($lg) {
+    font-size: fontSize(3);
+    margin-right: 2.5rem;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &--home {
+    display: none;
+    @include breakpoint($md) {
+      display: block;
+    }
+  }
+}
+
+.c-nav__link {
+  text-transform: lowercase;
+}
