@@ -1,10 +1,14 @@
 a {
 	color: $colour-black;
-	transition: all 0.3s;
+	transition: $transition;
+	position: relative;
 	&:hover,
 	&:focus,
 	&:active,
 	&:visited {
 		color: $colour-black-light;
 	}
+  &:hover {
+    animation: wobble 0.667s ease-in-out;
+  }
 }

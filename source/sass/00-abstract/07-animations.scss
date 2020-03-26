@@ -1,0 +1,26 @@
+@keyframes wobble {
+  0% {
+    top: 0;
+  }
+  15% {
+    top: 0.05rem;
+  }
+  30% {
+    top: -0.05rem;
+  }
+  45% {
+    top: 0.05rem;
+  }
+  60% {
+    top: -0.025rem;
+  }
+  75% {
+    top: 0.01rem;
+  }
+  90% {
+    top: -0.01rem;
+  }
+  100% {
+    top: 0;
+  }
+}

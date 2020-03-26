@@ -12,11 +12,6 @@
     font-size: fontSize(4);
   }
   &:hover,
-  &:active {
-    position: relative;
-    animation: wobble infinite;
-  }
-  &:hover,
   &:focus,
   &:active,
   &:visited {
@@ -29,20 +24,16 @@
   }
   &--highlighted {
     margin: 0 1px;
-    @include breakpoint(24) {
+    @include breakpoint($md) {
       margin: 0 2px;
     }
   }
   &--primary {
     color: $colour-primary;
+    transition: $transition;
   }
   &--secondary {
     color: $colour-secondary;
-  }
-}
-
-@keyframes wobble {
-  0% {
-
+    transition: $transition;
   }
 }
