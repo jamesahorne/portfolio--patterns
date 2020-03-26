@@ -1,0 +1,11 @@
+.g-header {
+  font-family: 'Lalezar', sans-serif, Arial;
+  letter-spacing: $letter-spacing;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 1rem;
+  @include breakpoint($sm) {
+    padding: 1rem 2rem;
+  }
+}
