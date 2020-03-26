@@ -1,0 +1,14 @@
+.c-brand {
+  font-family: 'Lalezar', sans-serif, Arial;
+}
+
+.c-brand__link {
+  font-size: fontSize(4);
+  letter-spacing: $letter-spacing;
+  &--highlighted-primary {
+    color: $colour-primary;
+  }
+  &--highlighted-secondary {
+    color: $colour-secondary;
+  }
+}
