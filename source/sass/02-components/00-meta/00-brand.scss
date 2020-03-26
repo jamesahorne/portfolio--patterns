@@ -1,3 +1,8 @@
+.c-brand {
+  font-family: 'Lalezar', sans-serif, Arial;
+  letter-spacing: $letter-spacing;
+}
+
 .c-brand__link {
   @include breakpoint(24) {
     font-size: fontSize(1);
@@ -15,6 +20,7 @@
   &:focus,
   &:active,
   &:visited {
+    animation: none;
     .c-brand__link--primary {
       color: $colour-primary-light;
     }
