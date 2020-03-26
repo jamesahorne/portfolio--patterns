@@ -11,6 +11,22 @@
   @include breakpoint($lg) {
     font-size: fontSize(4);
   }
+  &:hover,
+  &:active {
+    position: relative;
+    animation: wobble infinite;
+  }
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    .c-brand__link--primary {
+      color: $colour-primary-light;
+    }
+    .c-brand__link--secondary {
+      color: $colour-secondary-light;
+    }
+  }
   &--highlighted {
     margin: 0 1px;
     @include breakpoint(24) {
@@ -22,5 +38,11 @@
   }
   &--secondary {
     color: $colour-secondary;
+  }
+}
+
+@keyframes wobble {
+  0% {
+
   }
 }

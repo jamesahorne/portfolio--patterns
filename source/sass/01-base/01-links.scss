@@ -1,14 +1,10 @@
 a {
 	color: $colour-black;
 	transition: all 0.3s;
-
 	&:hover,
 	&:focus,
-	&:active {
-		color: blue;
-	}
-
+	&:active,
 	&:visited {
-		color: darkblue;
+		color: $colour-black-light;
 	}
 }
