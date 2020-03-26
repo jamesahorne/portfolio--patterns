@@ -1,14 +1,23 @@
-.c-brand {
-  font-family: 'Lalezar', sans-serif, Arial;
-}
-
 .c-brand__link {
-  font-size: fontSize(4);
-  letter-spacing: $letter-spacing;
-  &--highlighted-primary {
+  @include breakpoint(24) {
+    font-size: fontSize(1);
+  }
+  @include breakpoint($sm) {
+    font-size: fontSize(2);
+  }
+  @include breakpoint($md) {
+    font-size: fontSize(3);
+  }
+  @include breakpoint($lg) {
+    font-size: fontSize(4);
+  }
+  &--highlighted {
+    margin: 0 2px;
+  }
+  &--primary {
     color: $colour-primary;
   }
-  &--highlighted-secondary {
+  &--secondary {
     color: $colour-secondary;
   }
 }
