@@ -23,9 +23,15 @@
   animation: fade-in 2s forwards;
   &--primary {
     animation-delay: 1.7s;
+    .c-hero__text--full-stop {
+      color: $colour-primary;
+    }
   }
   &--secondary {
     animation-delay: 4.2s;
+    .c-hero__text--full-stop {
+      color: $colour-secondary;
+    }
   }
 }
 
