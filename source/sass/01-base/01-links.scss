@@ -6,7 +6,7 @@ a {
 	&:focus,
 	&:active,
 	&:visited {
-		color: $colour-black-light;
+		color: $colour-black-400;
 	}
   &:hover {
     animation: wobble 0.667s ease-in-out;
