@@ -29,3 +29,15 @@
   font-family: 'Lalezar', sans-serif, Arial;
   letter-spacing: $letter-spacing;
 }
+
+// Layout
+@mixin article-border {
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 5rem;
+    background-image: linear-gradient($colour-primary-0, $colour-primary-50, $colour-primary-0);
+  }
+}
