@@ -1,6 +1,5 @@
 .c-brand {
-  font-family: 'Lalezar', sans-serif, Arial;
-  letter-spacing: $letter-spacing;
+  @include font-logo;
 }
 
 .c-brand__link {
