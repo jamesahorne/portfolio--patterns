@@ -1,9 +1,10 @@
 .c-about {
   @include article-border;
-  opacity: 0;
-  transform: translateY(-150px) translateZ(-230px) rotateX(-90deg);
-  animation: fade-in 1s forwards, slide-down 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-  animation-delay: 6s;
+  &:before {
+    opacity: 0;
+    animation: fade-in 2s forwards;
+    animation-delay: 5s;
+  }
 }
 
 .c-about__title {
