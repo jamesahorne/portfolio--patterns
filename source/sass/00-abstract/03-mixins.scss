@@ -14,13 +14,13 @@
   font-family: 'Baloo 2', sans-serif, Arial;
   font-weight: 500;
   @if $level == 2 {
-    font-size: fontSize(2);
+    font-size: fontSize(1);
     margin: 1.5rem 0 0.75rem;
   } @else if $level == 3 {
-    font-size: fontSize(1);
+    font-size: fontSize(0);
     margin: 1rem 0 0.25rem;
   } @else {
-    font-size: fontSize(3);
+    font-size: fontSize(2);
     margin: 2rem 0 1rem;
   }
 }

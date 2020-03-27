@@ -20,7 +20,7 @@
 .c-hero__text {
   display: block;
   opacity: 0;
-  animation: hero-text 2s forwards;
+  animation: fade-in 2s forwards;
   &--primary {
     animation-delay: 1.7s;
   }
