@@ -10,3 +10,7 @@
 .c-about__title {
   @include font-secondary(1);
 }
+
+.c-about__description {
+  margin-bottom: 0.75rem;
+}
