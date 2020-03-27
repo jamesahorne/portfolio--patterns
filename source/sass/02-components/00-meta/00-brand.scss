@@ -21,10 +21,10 @@
   &:visited {
     animation: none;
     .c-brand__link--primary {
-      color: $colour-primary-light;
+      color: $colour-primary-300;
     }
     .c-brand__link--secondary {
-      color: $colour-secondary-light;
+      color: $colour-secondary-300;
     }
   }
   &--highlighted {
@@ -34,11 +34,11 @@
     }
   }
   &--primary {
-    color: $colour-primary;
+    color: $colour-primary-500;
     transition: $transition;
   }
   &--secondary {
-    color: $colour-secondary;
+    color: $colour-secondary-500;
     transition: $transition;
   }
 }

@@ -36,13 +36,13 @@
   &--primary {
     animation-delay: 1.7s;
     .c-hero__text--full-stop {
-      color: $colour-primary;
+      color: $colour-primary-500;
     }
   }
   &--secondary {
     animation-delay: 4.2s;
     .c-hero__text--full-stop {
-      color: $colour-secondary;
+      color: $colour-secondary-500;
     }
   }
 }
@@ -55,12 +55,12 @@
   left: -1rem;
   animation: hero-block 2s cubic-bezier(.74, .06, .4, .92);
   &--primary {
-    background-color: $colour-primary;
+    background-color: $colour-primary-500;
     top: 9px;
     animation-delay: 0.5s;
   }
   &--secondary {
-    background-color: $colour-secondary;
+    background-color: $colour-secondary-500;
     bottom: -1px;
     animation-delay: 3s;
   }
