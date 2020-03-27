@@ -1,20 +1,20 @@
 .c-hero {
-  min-height: calc(100vh - 2.25rem - 43px);
+  min-height: calc(100vh - 2.125rem - 43px);
   padding-top: calc(40vh - 43px);
   @include breakpoint(24) {
-    min-height: calc(100vh - 2.25rem - 49px);
+    min-height: calc(100vh - 2.125rem - 49px);
     padding-top: calc(40vh - 49px);
   }
   @include breakpoint(36) {
-    min-height: calc(100vh - 2.25rem - 74px);
+    min-height: calc(100vh - 2.125rem - 74px);
     padding-top: calc(40vh - 74px);
   }
   @include breakpoint(48) {
-    min-height: calc(100vh - 2.25rem - 78px);
+    min-height: calc(100vh - 2.125rem - 78px);
     padding-top: calc(40vh - 78px);
   }
   @include breakpoint(64) {
-    min-height: calc(100vh - 2.25rem - 90px);
+    min-height: calc(100vh - 2.125rem - 90px);
     padding-top: calc(40vh - 90px);
   }
 }
