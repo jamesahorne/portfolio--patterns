@@ -2,9 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  height: 43px;
   padding: 0.5rem 1rem;
+  @include breakpoint(24) {
+    height: 49px;
+  }
   @include breakpoint($sm) {
     padding: 1rem 2rem;
+    height: 74px;
+  }
+  @include breakpoint($md) {
+    padding: 1rem 2rem;
+    height: 78px;
+  }
+  @include breakpoint($lg) {
+    height: 90px;
   }
   @include breakpoint($xl) {
     padding: 1rem 3rem;

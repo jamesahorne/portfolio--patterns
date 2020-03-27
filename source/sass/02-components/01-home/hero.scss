@@ -1,11 +1,23 @@
 .c-hero {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
+  min-height: calc(100vh - 43px);
+  padding-top: 30vh;
+  @include breakpoint(24) {
+    min-height: calc(100vh - 49px);
+  }
+  @include breakpoint(36) {
+    min-height: calc(100vh - 74px);
+  }
+  @include breakpoint(48) {
+    min-height: calc(100vh - 78px);
+  }
+  @include breakpoint(64) {
+    min-height: calc(100vh - 90px);
+  }
 }
 
 .c-hero__title {
   position: relative;
+  width: fit-content;
   font-size: fontSize(2);
   font-weight: $font-weight-semi-bold;
   line-height: 1.3;
