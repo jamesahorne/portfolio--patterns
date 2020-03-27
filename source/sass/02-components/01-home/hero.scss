@@ -5,6 +5,7 @@
 }
 
 .c-hero__title {
+  position: relative;
   font-size: fontSize(2);
   line-height: 1.3;
   @include breakpoint($md) {
@@ -13,7 +14,36 @@
   @include breakpoint($lg) {
     font-size: fontSize(4);
   }
-  span {
-    display: block;
+}
+
+
+.c-hero__text {
+  display: block;
+  opacity: 0;
+  animation: hero-text 2s forwards;
+  &--primary {
+    animation-delay: 1.7s;
+  }
+  &--secondary {
+    animation-delay: 4.2s;
+  }
+}
+
+.c-hero__block {
+  display: block;
+  width: 0%;
+  height: calc(50% - 8px);
+  position: absolute;
+  left: -1rem;
+  animation: hero-block 2s cubic-bezier(.74, .06, .4, .92);
+  &--primary {
+    background-color: $colour-primary;
+    top: 9px;
+    animation-delay: 0.5s;
+  }
+  &--secondary {
+    background-color: $colour-secondary;
+    bottom: -1px;
+    animation-delay: 3s;
   }
 }
