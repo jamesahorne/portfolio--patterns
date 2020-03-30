@@ -1,12 +1,13 @@
 .l-content {
-  padding: 0 1rem;
+  padding: 1rem 1rem 4rem;
   @include breakpoint-up($sm) {
-    padding: 0 2rem;
+    padding: 2rem 2rem 5rem;
   }
   @include breakpoint-up($md) {
-    padding: 0 4rem;
+    padding: 5rem 4rem 7rem;
   }
   @include breakpoint-up($lg) {
+    padding: 7rem 4rem 10rem;
     margin: 0 auto;
     max-width: 56rem;
   }
