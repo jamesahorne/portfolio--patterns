@@ -1,26 +1,86 @@
+.c-accordion {
+  @include breakpoint-up($md) {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  // span {
+  //   @include breakpoint-up($md) {
+  //     border-right: 2px solid $colour-primary-500;
+  //     margin: 1rem 0;
+  //   }
+  // }
+}
+
 .c-accordion__heading {
   cursor: pointer;
   padding: 1rem;
   width: 100%;
-  text-align: left;
   transition: 0.4s;
+  @include breakpoint-between(0, $md) {
+    text-align: left;
+  }
   &:after {
-    content: '\02795';
-    font-size: 0.75rem;
-    color: $colour-black;
-    float: right;
+    @include breakpoint-between(0, $md) {
+      content: '\02795';
+      font-size: 0.75rem;
+      color: $colour-primary-500;
+      float: right;
+    }
   }
   &--is-active {
+    @include breakpoint-up($md) {
+      position: relative;
+    }
+    &:before {
+      @include breakpoint-up($md) {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: white;
+        transform: rotate(45deg);
+        top: 64px;
+        left: calc((100% - 20px) / 2);
+        z-index: 1;
+        box-shadow: -2px -2px 2.74791px rgba(0, 0, 0, 0.04), 0px 8.6871px 17.95px rgba(0, 0, 0, 0.07), 0px 100px 80px rgba(0, 0, 0, 0.01);
+      }
+    }
     &:after {
-      content: "\2796";
+      @include breakpoint-between(0, $md) {
+        content: "\2796";
+      }
+      @include breakpoint-up($md) {
+        content: "";
+        position: absolute;
+        width: calc(100% - 3rem);
+        height: 20px;
+        background: white;
+        top: 71px;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
     }
   }
 }
 
 .c-accordion__panel {
-  padding: 0 18px;
-  background-color: white;
+  padding: 0 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  @include breakpoint-up($md) {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+}
+
+.c-accordion__contents {
+  margin: 0.5rem 0 2.5rem;
+  padding: 1rem 0.75rem;
+  border-radius: $border-radius;
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.04), 0px 9px 18px rgba(0, 0, 0, 0.07), 0px 100px 80px rgba(0, 0, 0, 0.01);
 }
