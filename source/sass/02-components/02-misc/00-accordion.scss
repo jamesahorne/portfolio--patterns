@@ -1,28 +1,20 @@
 .c-accordion__heading {
-  background-color: #eee;
-  color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 1rem;
   width: 100%;
   text-align: left;
-  border: none;
-  outline: none;
   transition: 0.4s;
   &:after {
     content: '\02795';
-    font-size: 13px;
-    color: #777;
+    font-size: 0.75rem;
+    color: $colour-black;
     float: right;
-    margin-left: 5px;
   }
-}
-
-.isActive, .c-accordion__heading:hover {
-  background-color: #ccc;
-}
-
-.isActive:after {
-  content: "\2796";
+  &--is-active {
+    &:after {
+      content: "\2796";
+    }
+  }
 }
 
 .c-accordion__panel {
