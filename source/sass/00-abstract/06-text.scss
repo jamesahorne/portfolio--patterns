@@ -1,7 +1,11 @@
 body {
   @include font-primary;
-	color: $colour-black;
+  color: $colour-black;
+  font-size: fontSize(0);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include breakpoint-up($md) {
+    font-size: fontSize(1);
+  }
 }
