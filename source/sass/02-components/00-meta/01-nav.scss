@@ -28,6 +28,17 @@
   }
   &--home {
     display: none;
+    @include breakpoint-up($lg) {
+      display: block;
+    }
+  }
+  &--cv {
+    @include breakpoint-between(0, $md) {
+      margin-right: 0;
+    }
+  }
+  &--contact {
+    display: none;
     @include breakpoint-up($md) {
       display: block;
     }

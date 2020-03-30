@@ -5,7 +5,7 @@
   }
 }
 @mixin breakpoint-between($breakpoint-min, $breakpoint-max) {
-  @media (min-width: #{$breakpoint-min}rem) and (max-width: #{$breakpoint-max}rem) {
+  @media (min-width: #{$breakpoint-min}rem) and (max-width: #{$breakpoint-max - 0.001}rem) {
     @content;
   }
 }
