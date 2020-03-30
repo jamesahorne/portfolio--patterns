@@ -1,19 +1,19 @@
 .c-hero {
   min-height: calc(100vh - 2.125rem - 43px);
   padding-top: calc(40vh - 43px);
-  @include breakpoint(24) {
+  @include breakpoint-up(24) {
     min-height: calc(100vh - 2.125rem - 49px);
     padding-top: calc(40vh - 49px);
   }
-  @include breakpoint(36) {
+  @include breakpoint-up(36) {
     min-height: calc(100vh - 2.125rem - 74px);
     padding-top: calc(40vh - 74px);
   }
-  @include breakpoint(48) {
+  @include breakpoint-up(48) {
     min-height: calc(100vh - 2.125rem - 78px);
     padding-top: calc(40vh - 78px);
   }
-  @include breakpoint(64) {
+  @include breakpoint-up(64) {
     min-height: calc(100vh - 2.125rem - 90px);
     padding-top: calc(40vh - 90px);
   }
@@ -25,10 +25,10 @@
   font-size: fontSize(2);
   font-weight: $font-weight-semi-bold;
   line-height: 1.3;
-  @include breakpoint($md) {
+  @include breakpoint-up($md) {
     font-size: fontSize(3);
   }
-  @include breakpoint($lg) {
+  @include breakpoint-up($lg) {
     font-size: fontSize(4);
   }
 }

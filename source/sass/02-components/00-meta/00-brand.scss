@@ -3,16 +3,16 @@
 }
 
 .c-brand__link {
-  @include breakpoint(24) {
+  @include breakpoint-up(24) {
     font-size: fontSize(1);
   }
-  @include breakpoint($sm) {
+  @include breakpoint-up($sm) {
     font-size: fontSize(2);
   }
-  @include breakpoint($md) {
+  @include breakpoint-up($md) {
     font-size: fontSize(3);
   }
-  @include breakpoint($lg) {
+  @include breakpoint-up($lg) {
     font-size: fontSize(4);
   }
   &:hover,
@@ -29,7 +29,7 @@
   }
   &--highlighted {
     margin: 0 1px;
-    @include breakpoint($md) {
+    @include breakpoint-up($md) {
       margin: 0 2px;
     }
   }

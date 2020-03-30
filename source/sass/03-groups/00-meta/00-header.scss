@@ -4,24 +4,24 @@
   align-items: baseline;
   height: 43px;
   padding: 0.5rem 1rem;
-  @include breakpoint(24) {
+  @include breakpoint-up(24) {
     height: 49px;
   }
-  @include breakpoint($sm) {
+  @include breakpoint-up($sm) {
     padding: 1rem 2rem;
     height: 74px;
   }
-  @include breakpoint($md) {
+  @include breakpoint-up($md) {
     padding: 1rem 2rem;
     height: 78px;
   }
-  @include breakpoint($lg) {
+  @include breakpoint-up($lg) {
     height: 90px;
   }
-  @include breakpoint($xl) {
+  @include breakpoint-up($xl) {
     padding: 1rem 3rem;
   }
-  @include breakpoint($xxl) {
+  @include breakpoint-up($xxl) {
     padding: 1rem 4rem;
   }
 }

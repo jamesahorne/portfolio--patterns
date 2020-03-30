@@ -4,22 +4,22 @@
 
 .c-nav__item {
   margin-right: 0.75rem;
-  @include breakpoint(22) {
+  @include breakpoint-up(22) {
     margin-right: 1rem;
   }
-  @include breakpoint(24) {
+  @include breakpoint-up(24) {
     font-size: fontSize(1);
   }
-  @include breakpoint(25) {
+  @include breakpoint-up(25) {
     margin-right: 1.5rem;
   }
-  @include breakpoint($sm) {
+  @include breakpoint-up($sm) {
     font-size: fontSize(2);
   }
-  @include breakpoint($md) {
+  @include breakpoint-up($md) {
     margin-right: 2rem;
   }
-  @include breakpoint($lg) {
+  @include breakpoint-up($lg) {
     font-size: fontSize(3);
     margin-right: 2.5rem;
   }
@@ -28,7 +28,7 @@
   }
   &--home {
     display: none;
-    @include breakpoint($md) {
+    @include breakpoint-up($md) {
       display: block;
     }
   }

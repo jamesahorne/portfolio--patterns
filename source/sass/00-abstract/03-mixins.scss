@@ -1,6 +1,11 @@
 // Breakpoints
-@mixin breakpoint($breakpoint) {
+@mixin breakpoint-up($breakpoint) {
   @media (min-width: #{$breakpoint}rem) {
+    @content;
+  }
+}
+@mixin breakpoint-between($breakpoint-min, $breakpoint-max) {
+  @media (min-width: #{$breakpoint-min}rem) and (max-width: #{$breakpoint-max}rem) {
     @content;
   }
 }
