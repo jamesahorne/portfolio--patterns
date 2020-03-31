@@ -1,5 +1,5 @@
 .c-about {
-  @include article-border;
+  @include layout-spacing;
   &:before {
     opacity: 0;
     animation: fade-in 2s forwards;

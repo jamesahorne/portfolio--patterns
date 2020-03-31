@@ -1,4 +1,5 @@
 .c-hero {
+  @include layout-spacing;
   min-height: calc(100vh - 2.125rem - 43px);
   padding-top: calc(40vh - 43px);
   @include breakpoint-up(24) {
