@@ -1,10 +1,5 @@
 .c-about {
   @include layout-spacing;
-  &:before {
-    opacity: 0;
-    animation: fade-in 2s forwards;
-    animation-delay: 5s;
-  }
 }
 
 .c-about__description {

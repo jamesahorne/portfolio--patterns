@@ -55,14 +55,20 @@
 .c-hero__block {
   display: block;
   width: 0%;
-  height: calc(50% - 8px);
+  height: calc(50% - 5px);
   position: absolute;
-  left: -1rem;
+  left: 0;
   animation: hero-block 2s cubic-bezier(.74, .06, .4, .92);
+  @include breakpoint-up($md) {
+    height: calc(50% - 6px);
+  }
   &--primary {
     background-color: $colour-primary-500;
-    top: 9px;
+    top: 6px;
     animation-delay: 0.5s;
+    @include breakpoint-up($md) {
+      top: 7px;
+    }
   }
   &--secondary {
     background-color: $colour-secondary-500;
