@@ -2,20 +2,22 @@
 const allAccordions = document.getElementsByClassName("c-accordion__heading");
 const activeAccordions = document.getElementsByClassName("c-accordion__heading c-accordion__heading--is-active");
 
-// Open first accordion (the active class is set in the JS) and set height (the panels are absolutely positioned, so add the panel height and padding to the parent's height)
+// Open first accordion (active class is set here, not in HTML) and set heights (panels are absolutely positioned, so need add accordion and panel height to section height)
 const firstAccordion = allAccordions[0];
-const firstAccordionSection = allAccordions[0].parentNode;
+const firstSection = allAccordions[0].parentNode;
 const firstPanel = firstAccordion.nextElementSibling;
+const accordionHeight = firstAccordion.scrollHeight;
+
 firstAccordion.classList.add('c-accordion__heading--is-active');
-firstPanel.style.maxHeight = firstPanel.scrollHeight + 'px';
-firstAccordionSection.style.height += firstPanel.style.maxHeight;
+firstPanel.style.maxHeight = firstPanel.scrollHeight + 24 + 'px';
+firstSection.style.height += firstPanel.scrollHeight + accordionHeight + 24 + 'px';
 
 // Loop through all accordions in allAccordions to add a click event listener
 for (let i = 0; i < allAccordions.length; i++) {
   allAccordions[i].addEventListener("click", function() {
     let isActiveAccordion = this.classList.contains('c-accordion__heading--is-active');
     let accordionSection = this.parentNode;
-    console.log(accordionSection);
+    let panel = this.nextElementSibling;
 
     // If it's already open, leave it.
     // Otherwise, shut all other accordions and open the one clicked on
@@ -24,24 +26,18 @@ for (let i = 0; i < allAccordions.length; i++) {
       // Loop through activeAccordions and remove active class and panel height
       for (let j = 0; j < activeAccordions.length; j++) {
         let currentAccordion = activeAccordions[j];
-        currentAccordion.classList.remove('c-accordion__heading--is-active');
+        let currentAccordionSection = this.parentNode;
         let panel = currentAccordion.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-        }
+
+        currentAccordion.classList.remove('c-accordion__heading--is-active');
+        panel.style.maxHeight = null;
+        currentAccordionSection.style.height = null;
       }
 
       // Add active class and panel height
       this.classList.toggle('c-accordion__heading--is-active');
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        accordionSection.style.height += panel.style.maxHeight;
-      }
+      panel.style.maxHeight = panel.scrollHeight + 24 + 'px';
+      accordionSection.style.height += panel.scrollHeight + accordionHeight + 'px';
     }
   });
 }
