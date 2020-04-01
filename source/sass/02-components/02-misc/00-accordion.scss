@@ -72,7 +72,7 @@
   padding: 0 1rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height $transition-duration--double ease-out;
+  transition: max-height $transition-duration ease-out;
   @include breakpoint-up($md) {
     position: absolute;
     left: 0;
