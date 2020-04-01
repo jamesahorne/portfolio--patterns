@@ -1,6 +1,6 @@
 a {
 	color: $colour-black-500;
-	transition: $transition;
+	transition: all $transition-duration;
 	position: relative;
 	&:hover,
 	&:focus,

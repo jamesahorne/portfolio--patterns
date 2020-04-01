@@ -19,7 +19,8 @@ $font-weight-bold: 700;
 $letter-spacing: 0.05rem;
 
 // Transitions
-$transition: all 0.3s;
+$transition-duration: 0.3s;
+$transition-duration--double: 0.6s;
 
 // Borders
 $border-radius: 5px;

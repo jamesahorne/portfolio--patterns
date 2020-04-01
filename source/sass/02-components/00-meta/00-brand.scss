@@ -35,10 +35,10 @@
   }
   &--primary {
     color: $colour-primary-500;
-    transition: $transition;
+    transition: all $transition-duration;
   }
   &--secondary {
     color: $colour-secondary-500;
-    transition: $transition;
+    transition: all $transition-duration;
   }
 }
