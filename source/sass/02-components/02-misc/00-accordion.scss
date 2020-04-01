@@ -5,7 +5,7 @@
     position: relative;
   }
 
-  // span {
+  // & > span {
   //   @include breakpoint-up($md) {
   //     border-right: 2px solid $colour-primary-500;
   //     margin: 1rem 0;
@@ -39,14 +39,15 @@
       @include breakpoint-up($md) {
         content: "";
         position: absolute;
-        width: 16px;
-        height: 16px;
-        background: white;
+        width: 24px;
+        height: 24px;
+        background: $colour-white;
         transform: rotate(45deg);
-        top: 64px;
+        top: 59px;
         left: calc((100% - 20px) / 2);
         z-index: 1;
-        box-shadow: -2px -2px 2.74791px rgba(0, 0, 0, 0.04), 0px 8.6871px 17.95px rgba(0, 0, 0, 0.07), 0px 100px 80px rgba(0, 0, 0, 0.01);
+        box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.04), 0px 9px 18px rgba(0, 0, 0, 0.07), 0px 100px 80px rgba(0, 0, 0, 0);
+        box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.04), 0px 0px 4px rgba(0, 0, 0, 0.07), 0px 0px 0px rgba(0, 0, 0, 0);
       }
     }
     &:after {
@@ -58,7 +59,7 @@
         position: absolute;
         width: calc(100% - 3rem);
         height: 20px;
-        background: white;
+        background: $colour-white;
         top: 71px;
         left: 50%;
         z-index: 1;
@@ -74,7 +75,7 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   @include breakpoint-up($md) {
-    position: relative;
+    position: absolute;
     left: 0;
     right: 0;
   }
@@ -82,7 +83,7 @@
 
 .c-accordion__contents {
   margin: 0.5rem 0 2.5rem;
-  padding: 1rem 0.75rem;
+  padding: 1.5rem 2rem;
   border-radius: $border-radius;
-  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.04), 0px 9px 18px rgba(0, 0, 0, 0.07), 0px 100px 80px rgba(0, 0, 0, 0.01);
+  box-shadow: $box-shadow;
 }
