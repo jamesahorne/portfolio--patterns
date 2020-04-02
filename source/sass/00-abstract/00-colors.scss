@@ -3,13 +3,13 @@
 // 400: colour-500, opacity 0.8
 // 300: colour-500, opacity 0.6
 // 100: colour-500, opacity 0.2
-//  50: colour-100, opacity 0.2
+//  50: colour-100, opacity 0.15
 
 // White
 $colour-white: #fcfcfc;
 
 // Black
-$colour-black-50:  rgba(214, 214, 214, 0.2);
+$colour-black-50:  rgba(214, 214, 214, 0.15);
 $colour-black-100: #d6d6d6;
 $colour-black-300: #858585;
 $colour-black-400: #5c5c5c;
@@ -17,7 +17,7 @@ $colour-black-500: #333333;
 $colour-black-600: #000000;
 
 // Primary
-$colour-primary-50:  rgba(212, 224, 253, 0.5);
+$colour-primary-50:  rgba(212, 224, 253, 0.15);
 $colour-primary-100: #d4e0fd;
 $colour-primary-300: #7fa3f9;
 $colour-primary-400: #5584F6;
@@ -25,7 +25,7 @@ $colour-primary-500: #2765f5;
 $colour-primary-600: #114ad0;
 
 // Secondary
-$colour-secondary-50:  rgba(253, 217, 215, 0.2);
+$colour-secondary-50:  rgba(253, 217, 215, 0.15);
 $colour-secondary-100: #fdd9d7;
 $colour-secondary-300: #f88e87;
 $colour-secondary-400: #f4695e;
