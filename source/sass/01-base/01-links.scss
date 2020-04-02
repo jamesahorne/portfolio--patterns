@@ -1,14 +1,30 @@
 .u-link {
-	color: $colour-primary-500;
-	border-bottom: 2px solid $colour-primary-400;
-	transition: all $transition;
+	display: inline-flex;
+	color: $colour-black-500;
+	position: relative;
+	overflow: hidden;
+	transition: color $transition;
 	&:hover,
 	&:focus,
 	&:active {
-		color: $colour-black-500;
-		border-bottom-color: $colour-black-300;
+		color: $colour-primary-500;
+		&:after {
+			transform: translateX(-105%);
+		}
+	}
+	&:after {
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: $colour-primary-400;
+		border-radius: 5px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transform: translateX(0);
+		transition: transform $transition;
 	}
 	&:visited {
-		color: $colour-primary-500;
+		color: $colour-black-500;
 	}
 }
