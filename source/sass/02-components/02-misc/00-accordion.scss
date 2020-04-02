@@ -17,14 +17,13 @@
 
 .c-accordion__section {
   flex: 1;
-  transition: height $transition-duration ease-out;
+  transition: height $transition-duration ease-in-out;
 }
 
 .c-accordion__heading {
   cursor: pointer;
   padding: 1rem;
   width: 100%;
-  transition: all $transition-duration;
   @include breakpoint-between(0, $md) {
     text-align: left;
   }
@@ -78,7 +77,7 @@
   padding: 0 1rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height $transition-duration ease-out;
+  transition: max-height $transition-duration ease-in-out;
   @include breakpoint-up($md) {
     position: absolute;
     left: 0;

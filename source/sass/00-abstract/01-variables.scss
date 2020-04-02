@@ -20,6 +20,8 @@ $letter-spacing: 0.05rem;
 
 // Transitions
 $transition-duration: 0.3s;
+$transition-timing: cubic-bezier(.74, .06, .4, .92);
+$transition: $transition-duration $transition-timing;
 
 // Borders
 $border-radius: 5px;
