@@ -3,20 +3,20 @@
     display: flex;
     position: relative;
   }
+}
 
-  & > div {
-    flex: 1;
+.c-accordion__border {
+  @include breakpoint-between(0, $md) {
+    display: none;
   }
-
-  // & > span {
-  //   @include breakpoint-up($md) {
-  //     border-right: 2px solid $colour-primary-500;
-  //     margin: 1rem 0;
-  //   }
-  // }
+  @include breakpoint-up($md) {
+    border-right: 2px solid $colour-primary-500;
+    margin: 1rem 0;
+  }
 }
 
 .c-accordion__section {
+  flex: 1;
   transition: height $transition-duration ease-out;
 }
 
