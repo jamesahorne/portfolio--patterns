@@ -47,4 +47,8 @@
 
 .c-nav__link {
   text-transform: lowercase;
+	position: relative;
+  &:hover {
+    animation: wobble 0.667s ease-in-out;
+  }
 }
