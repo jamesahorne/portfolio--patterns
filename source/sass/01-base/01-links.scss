@@ -1,14 +1,14 @@
-a {
-	color: $colour-black-500;
+.u-link {
+	color: $colour-primary-500;
+	border-bottom: 2px solid $colour-primary-400;
 	transition: all $transition-duration;
-	position: relative;
 	&:hover,
 	&:focus,
-	&:active,
-	&:visited {
-		color: $colour-black-400;
+	&:active {
+		color: $colour-black-500;
+		border-bottom-color: $colour-black-300;
 	}
-  &:hover {
-    animation: wobble 0.667s ease-in-out;
-  }
+	&:visited {
+		color: $colour-primary-500;
+	}
 }
