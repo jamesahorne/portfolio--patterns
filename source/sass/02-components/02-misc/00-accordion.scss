@@ -10,8 +10,11 @@
     display: none;
   }
   @include breakpoint-up($md) {
-    border-right: 2px solid $colour-primary-400;
     margin: 1rem 0;
+
+		width: 2px;
+		background-color: $colour-primary-400;
+		border-radius: 5px;
   }
 }
 
