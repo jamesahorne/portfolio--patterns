@@ -1,6 +1,6 @@
 //            Accordion            //
 
-const accordionComponent = document.getElementsByClassName('c-accordion');
+const accordionComponent = document.getElementById('c-accordion');
 
 // If it doesn't exist you get a console error (if it isn't "undefined" and it isn't "null", then it exists)
 if(typeof(accordionComponent) != 'undefined' && accordionComponent != null){
