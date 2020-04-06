@@ -53,3 +53,34 @@
   font-family: 'Lalezar', sans-serif, Arial;
   letter-spacing: $letter-spacing;
 }
+
+// Transitions
+@mixin header-link-transition($bottom: -10) {
+  position: relative;
+  &:hover {
+    &:before,
+    &:after {
+      width: 10px;
+      transition-delay: $transition-duration;
+    }
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0px;
+    height: 2px;
+    background-color: $colour-primary-400;
+		position: absolute;
+    left: 50%;
+    bottom: #{$bottom}px;
+    transition: width $transition;
+    transition-delay: 0s;
+  }
+  &:before {
+    transform: translateX(-50%) rotate(40deg);
+  }
+  &:after {
+    transform: translateX(-50%) rotate(140deg);
+  }
+}
