@@ -11,9 +11,9 @@
   }
   @include breakpoint-up($md) {
     margin: 1rem 0;
-		width: 2px;
-		background-color: $colour-primary-400;
-		border-radius: 5px;
+    width: 2px;
+    background-color: $colour-primary-400;
+    border-radius: $border-radius;
   }
 }
 
