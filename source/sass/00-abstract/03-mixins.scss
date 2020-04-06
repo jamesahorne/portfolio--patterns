@@ -11,6 +11,13 @@
 }
 
 // Fonts
+@mixin font-sizing-default {
+  font-size: fontSize(0);
+  @include breakpoint-up($md) {
+    font-size: fontSize(1);
+  }
+}
+
 @mixin font-primary {
   font-family: 'Open Sans', sans-serif, Arial;
 }

@@ -1,12 +1,9 @@
 body {
   @include font-primary;
+  @include font-sizing-default;
   background-color: $colour-white;
   color: $colour-black-500;
-  font-size: fontSize(0);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include breakpoint-up($md) {
-    font-size: fontSize(1);
-  }
 }
