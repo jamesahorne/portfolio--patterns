@@ -22,14 +22,17 @@ if(typeof(accordionComponent) != 'undefined' && accordionComponent != null){
       // If active, close it, else, first close previous accordion and then open current one
       if (isActiveAccordion) {
         prevAccordion.classList.remove('c-accordion__button--is-active');
+        prevAccordion.setAttribute('aria-expanded', 'false');
         prevPanel.style.maxHeight = null;
         prevAccordionSection.style.height = accordionHeight + 'px';
       } else {
         prevAccordion.classList.remove('c-accordion__button--is-active');
         prevPanel.style.maxHeight = null;
         prevAccordionSection.style.height = accordionHeight + 'px';
+        prevAccordion.setAttribute('aria-expanded', 'false');
 
         this.classList.toggle('c-accordion__button--is-active');
+        this.setAttribute('aria-expanded', 'true');
         panel.style.maxHeight = panel.scrollHeight + 24 + 'px';
         accordionSection.style.height = panel.scrollHeight + accordionHeight + 'px';
       }
@@ -50,3 +53,4 @@ if(typeof(accordionComponent) != 'undefined' && accordionComponent != null){
 // TODO
 // 
 // Accessibility
+//   Check on mobile too
