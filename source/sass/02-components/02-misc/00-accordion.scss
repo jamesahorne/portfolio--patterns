@@ -23,6 +23,11 @@
 }
 
 .c-accordion__heading {
+  @include font-sizing-default;
+  font-weight: $font-weight-normal;
+}
+
+.c-accordion__button {
   cursor: pointer;
   padding: 1rem;
   width: 100%;
@@ -100,6 +105,9 @@
 }
 
 .c-accordion__description {
+  @include breakpoint-between(0, $md) {
+    display: none;
+  }
   @include breakpoint-up($md) {
     width: 100%;
     text-align: center;
