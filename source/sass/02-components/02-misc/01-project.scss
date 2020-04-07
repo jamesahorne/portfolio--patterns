@@ -1,0 +1,20 @@
+.project {
+  margin-bottom: 4rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project__image {
+  width: 100%;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+.project__caption {
+  margin-top: 0.75rem;
+}
+
+
+
+// Make responsive from md up
