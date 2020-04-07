@@ -40,13 +40,13 @@
   &--primary {
     animation-delay: 1.79s;
     .c-hero__text--full-stop {
-      color: $colour-primary-500;
+      color: $colour-primary-400;
     }
   }
   &--secondary {
     animation-delay: 4.2s;
     .c-hero__text--full-stop {
-      color: $colour-secondary-500;
+      color: $colour-secondary-400;
     }
   }
 }
@@ -62,7 +62,7 @@
     height: calc(50% - 6px);
   }
   &--primary {
-    background-color: $colour-primary-500;
+    background-color: $colour-primary-400;
     top: 6px;
     animation-delay: 0.5s;
     @include breakpoint-up($md) {
@@ -70,7 +70,7 @@
     }
   }
   &--secondary {
-    background-color: $colour-secondary-500;
+    background-color: $colour-secondary-400;
     bottom: -1px;
     animation-delay: 3s;
   }
