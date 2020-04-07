@@ -2,12 +2,17 @@
 	cursor: pointer;
   color: $colour-black-500;
 	text-transform: uppercase;
-	font-weight: 700;
-	display: inline-flex;
+	font-weight: $font-weight-semi-bold;
+	display: flex;
+	margin: 1rem auto;
   padding: 0.5rem 1rem;
 	position: relative;
 	overflow: hidden;
 	transition: color $transition;
+	@include breakpoint-up($md) {
+		margin-left: 0;
+		margin-right: 0;
+	}
 	&:hover {
 		color: $colour-primary-500;
 		&:before,
