@@ -9,3 +9,12 @@
 .u-heading-3  {
   @include font-secondary(3);
 }
+
+.u-text {
+  margin-bottom: 0.75rem;
+  &--center {
+    @include breakpoint-between(0, $md) {
+      text-align: center;
+    }
+  }
+}
