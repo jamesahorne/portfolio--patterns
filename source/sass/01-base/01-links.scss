@@ -24,9 +24,6 @@
 		transform: translateX(0);
 		transition: transform $transition;
 	}
-	&:visited {
-		color: $colour-black-500;
-	}
 	&--invert-\@md {
 			@include breakpoint-up {
 				color: $colour-white;
