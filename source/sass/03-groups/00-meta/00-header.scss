@@ -8,20 +8,15 @@
     height: 49px;
   }
   @include breakpoint-up($sm) {
-    padding: 1rem 2rem;
+    padding: 1rem;
     height: 74px;
   }
   @include breakpoint-up {
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     height: 78px;
   }
   @include breakpoint-up($lg) {
-    height: 90px;
-  }
-  @include breakpoint-up($xl) {
-    padding: 1rem 3rem;
-  }
-  @include breakpoint-up($xxl) {
     padding: 1rem 4rem;
+    height: 90px;
   }
 }
