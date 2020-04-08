@@ -1,9 +1,61 @@
 .project__image {
   width: 100%;
+  height: auto;
+  display: block;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
 }
 
+.project__figure {
+  @include breakpoint-up {
+    position: relative;
+    &:hover {
+      &:after {
+        background-color: $colour-white;
+        color: $colour-black-500;
+      }
+      .project__caption {
+        opacity: 1;
+      }
+    }
+    &:after {
+      content: 'i';
+      background-color: $colour-black-400;
+      color: $colour-white;
+      font-size: fontSize(0);
+      font-weight: $font-weight-bold;
+      font-style: italic;
+      text-align: center;
+      vertical-align: middle;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 1rem;
+      right: 1.5rem;
+      transition: all $transition;
+    }
+  }
+}
+
 .project__caption {
   margin-top: 0.75rem;
+  @include breakpoint-up {
+    font-size: fontSize(0);
+    margin: 0;
+    opacity: 0;
+    background-color: $colour-black-400;
+    color: $colour-white;
+    padding: 1rem 1.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: $border-radius;
+    transition: opacity $transition;
+  }
+  @include breakpoint-up($xxl) {
+    font-size: fontSize(1);
+    padding: 1.25rem 1.75rem;
+  }
 }
