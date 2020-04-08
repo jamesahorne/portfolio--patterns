@@ -84,3 +84,14 @@
     transform: translateX(-50%) rotate(140deg);
   }
 }
+
+// CV
+@mixin border($alignment) {
+  border-#{$alignment}: $cv-border;
+  @if $alignment == 'top' {
+    margin-#{$alignment}: 0.5rem;
+  } @else {
+    margin-#{$alignment}: 1.5rem;
+  }
+  padding-#{$alignment}: 1.5rem;
+}
