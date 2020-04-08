@@ -1,6 +1,15 @@
 .projects__grid {
-  margin-top: 2rem;
-  @include breakpoint-up($sm) {
-    display: grid;
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 2rem;
+  @include breakpoint-up($md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem 4rem;
+  }
+  @include breakpoint-up($xxl) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -13rem;
+    margin-right: 13rem;
+    width: calc(100% + 26rem);
   }
 }
