@@ -11,7 +11,7 @@
   @include breakpoint-up($sm) {
     font-size: fontSize(2);
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     font-size: fontSize(3);
   }
   @include breakpoint-up($lg) {
@@ -22,7 +22,7 @@
   }
   &--highlighted {
     margin: 0 1px;
-    @include breakpoint-up($md) {
+    @include breakpoint-up {
       margin: 0 2px;
     }
   }

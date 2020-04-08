@@ -2,7 +2,7 @@
   margin-top: 1.25rem;
   display: grid;
   gap: 2rem;
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.25rem 4rem;
   }

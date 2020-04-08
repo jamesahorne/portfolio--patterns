@@ -36,7 +36,7 @@
   }
   &--contact {
     display: none;
-    @include breakpoint-up($md) {
+    @include breakpoint-up {
       display: block;
     }
   }
@@ -52,7 +52,7 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }

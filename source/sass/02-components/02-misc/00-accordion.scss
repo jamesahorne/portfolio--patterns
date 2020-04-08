@@ -1,5 +1,5 @@
 .c-accordion {
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     display: flex;
     position: relative;
   }
@@ -9,7 +9,7 @@
   @include breakpoint-between(0, $md) {
     display: none;
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     margin: 1rem 0;
     width: 2px;
     background-color: $colour-primary-400;
@@ -48,11 +48,11 @@
     }
   }
   &--is-active {
-    @include breakpoint-up($md) {
+    @include breakpoint-up {
       position: relative;
     }
     &:before {
-      @include breakpoint-up($md) {
+      @include breakpoint-up {
         content: "";
         position: absolute;
         width: 24px;
@@ -69,7 +69,7 @@
       @include breakpoint-between(0, $md) {
         content: "\2796";
       }
-      @include breakpoint-up($md) {
+      @include breakpoint-up {
         content: "";
         position: absolute;
         width: calc(100% - 3rem);
@@ -89,7 +89,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height $transition-duration ease-in-out;
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     position: absolute;
     left: 0;
     right: 0;
@@ -108,7 +108,7 @@
   @include breakpoint-between(0, $md) {
     display: none;
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     width: 100%;
     text-align: center;
     position: absolute;

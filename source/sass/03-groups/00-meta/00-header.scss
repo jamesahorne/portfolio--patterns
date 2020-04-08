@@ -11,7 +11,7 @@
     padding: 1rem 2rem;
     height: 74px;
   }
-  @include breakpoint-up($md) {
+  @include breakpoint-up {
     padding: 1rem 2rem;
     height: 78px;
   }
