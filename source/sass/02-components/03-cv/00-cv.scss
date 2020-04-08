@@ -1,0 +1,237 @@
+$border: 2px solid $colour-primary-400;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 2.5rem;
+
+@mixin border($alignment) {
+  border-#{$alignment}: $border;
+  @if $alignment == 'top' {
+    margin-#{$alignment}: 0.5rem;
+  } @else {
+    margin-#{$alignment}: 1rem;
+  }
+  padding-#{$alignment}: 1rem;
+}
+
+.cv {
+  font-family: 'Montserrat', sans-serif;
+  color: $colour-black-500;
+  font-size: $font-size-sm;
+  margin: 3rem 2rem 2rem;
+  @include breakpoint-up($sm) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    grid-template-areas:
+      'secondary primary'
+    ;
+    max-width: 39.375rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    color: $colour-black-500;
+    text-decoration: underline transparent;
+    transition: ease-in-out 0.15s;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $colour-black-300;
+    }
+  }
+
+  .cv__primary {
+    grid-area: primary;
+    > * {
+      @include border(bottom);
+      @include breakpoint-up($sm) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .cv__secondary {
+    grid-area: secondary;
+    > * {
+      @include border(bottom);
+      @include breakpoint-up($sm) {
+        &:first-child {
+          @include border(top);
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .cv__heading-1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size-md;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $colour-primary-500;
+    line-height: $line-height-sm;
+  }
+
+  .cv__heading-2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size-md;
+    font-weight: 500;
+    line-height: $line-height-sm;
+  }
+
+  .cv__heading-3 {
+    font-size: $font-size-xs;
+    font-weight: 400;
+    color: $colour-black-300;
+    margin-bottom: 0.375rem;
+  }
+
+  .cv__content {
+    padding-left: 0.5rem;
+  }
+
+  .cv__list {
+    li {
+      display: block;
+      margin-bottom: 0.375rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &--icons {
+      margin-left: -0.5rem;
+      padding-left: 1.5rem;
+      li {
+        position: relative;
+        &:before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          background-size: 100% 100%;
+          margin-right: 0.5rem;
+          position: absolute;
+          top: 3px;
+          left: -1.5rem;
+        }
+      }
+    }
+    &--skills {
+      @include breakpoint-up($sm) {
+        column-count: 2;
+      }
+    }
+    &--bullets {
+      margin-top: 0.25rem;
+      li {
+        position: relative;
+        padding-left: 1.25rem;
+        &:before {
+          content: "\2022";
+          color: $colour-primary-400;
+          font-weight: bold;
+          font-size: $font-size-md;
+          display: inline-block;
+          width: 1rem;
+          position: absolute;
+          top: 0;
+          left: 0.25rem;
+        }
+      }
+    }
+
+    .cv__sublist {
+      margin-top: 0.5rem;
+      ul {
+        margin-top: 0.25rem;
+        padding-left: 0.5rem;
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .cv__star {
+    color: $colour-primary-400;
+    float: right;
+  }
+
+  .cv__portfolio {
+    &:before {
+      background-image: url('/images/cv/icon-portfolio.svg');
+    }
+  }
+
+  .cv__github {
+    &:before {
+      background-image: url('/images/cv/icon-github.svg');
+    }
+  }
+
+  .cv__email {
+    &:before {
+      background-image: url('/images/cv/icon-email.svg');
+    }
+  }
+
+  .cv__phone {
+    &:before {
+      background-image: url('/images/cv/icon-phone.svg');
+    }
+  }
+
+  .cv__music {
+    &:before {
+      background-image: url('/images/cv/icon-music.svg');
+    }
+  }
+
+  .cv__fitness {
+    &:before {
+      background-image: url('/images/cv/icon-fitness.svg');
+    }
+  }
+
+  .cv__experience-block {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      bottom: -1rem;
+      left: calc((100% - 50px) / 2);
+      height: 1px;
+      width: 50px;
+      border-bottom: $border;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  .cv__date {
+    display: block;
+    font-size: $font-size-xs;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    @include breakpoint-up($sm) {
+      display: inline;
+      margin-top: 0;
+      float: right;
+    }
+  }
+}
