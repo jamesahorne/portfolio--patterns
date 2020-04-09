@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @include font-primary;
   @include font-sizing-default;
