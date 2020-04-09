@@ -1,4 +1,4 @@
-.c-hero {
+.c-home {
   min-height: calc(100vh - 43px);
   padding-top: calc(40vh - 43px);
   @include breakpoint-up(24) {
@@ -19,7 +19,7 @@
   }
 }
 
-.c-hero__title {
+.c-home__title {
   position: relative;
   width: fit-content;
   font-size: fontSize(2);
@@ -33,31 +33,31 @@
   }
 }
 
-.c-hero__text {
+.c-home__text {
   display: block;
   opacity: 0;
   animation: fade-in 2s forwards;
   &--primary {
     animation-delay: 1.79s;
-    .c-hero__text--full-stop {
+    .c-home__text--full-stop {
       color: $colour-primary-400;
     }
   }
   &--secondary {
     animation-delay: 4.2s;
-    .c-hero__text--full-stop {
+    .c-home__text--full-stop {
       color: $colour-secondary-400;
     }
   }
 }
 
-.c-hero__block {
+.c-home__block {
   display: block;
   width: 0%;
   height: calc(50% - 5px);
   position: absolute;
   left: 0;
-  animation: hero-block 2s cubic-bezier(.74, .06, .4, .92);
+  animation: home-block 2s cubic-bezier(.74, .06, .4, .92);
   @include breakpoint-up {
     height: calc(50% - 6px);
   }
