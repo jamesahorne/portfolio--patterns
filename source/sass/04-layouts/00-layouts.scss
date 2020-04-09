@@ -12,26 +12,28 @@
         transform: translateX(-50%);
       }
     }
+    &:last-child {
+      .l-spacing {
+        padding-bottom: 5rem;
+        @include breakpoint-up {
+          padding-bottom: 8rem;
+        }
+        @include breakpoint-up($lg) {
+          padding-bottom: 10rem;
+        }
+      }
+    }
   }
 }
 
 .l-spacing {
   padding: 5rem 1rem 6rem;
-  &:last-child {
-    padding-bottom: 5rem;
-  }
   @include breakpoint-up {
     padding: 8rem 4rem 11rem;
-    &:last-child {
-      padding-bottom: 8rem;
-    }
   }
   @include breakpoint-up($lg) {
     padding: 10rem 4rem 14rem;
     margin: 0 auto;
     max-width: 56rem;
-    &:last-child {
-      padding-bottom: 10rem;
-    }
   }
 }
