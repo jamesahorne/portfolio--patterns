@@ -3,16 +3,6 @@
   color: $colour-black-500;
   font-size: $cv-fs-sm;
   position: relative;
-
-  a {
-    text-decoration: underline transparent;
-    transition: $transition;
-    &:hover,
-    &:focus,
-    &:active {
-      color: $colour-black-300;
-    }
-  }
 }
 
 .cv__main {
