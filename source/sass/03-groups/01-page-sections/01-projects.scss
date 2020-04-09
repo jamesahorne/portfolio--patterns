@@ -1,7 +1,11 @@
 .projects__grid {
   margin-top: 1.25rem;
   display: grid;
+  grid-template-columns: repeat(1, minmax(18rem, 30rem));
   gap: 2rem;
+  @include breakpoint-between(0, $md) {
+    justify-content: center;
+  }
   @include breakpoint-up {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.25rem 4rem;
@@ -11,5 +15,27 @@
     margin-left: -13rem;
     margin-right: 13rem;
     width: calc(100% + 26rem);
+  }
+  &--1 {
+    @include breakpoint-up {
+      grid-template-columns: repeat(1, minmax(18rem, 30rem));
+      justify-content: center;
+    }
+    @include breakpoint-up($xxl) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+  &--2,
+  &--4 {
+    @include breakpoint-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up($xxl) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
   }
 }
