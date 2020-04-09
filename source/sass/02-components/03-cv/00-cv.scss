@@ -9,9 +9,11 @@
   margin: 2rem 0 3rem;
   padding: 0 2rem;
   @include breakpoint-up($sm) {
+    position: relative;
     max-width: 39.375rem;
     min-height: 891px;
     margin: 4rem auto 4.5rem;
+    padding: 2rem;
   }
 }
 
@@ -272,7 +274,6 @@
 
 .cv__main {
   @include breakpoint-up($sm) {
-    position: relative;
     &:hover {
       &:before {
         transform: translateX(-50%) rotate(40deg);
