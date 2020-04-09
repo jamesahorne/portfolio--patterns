@@ -4,7 +4,6 @@
   &:focus ~ .contact__role-details,
   &:active ~ .contact__role-details {
     max-height: 100px;
-    opacity: 1;
   }
 }
 
@@ -12,17 +11,19 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  opacity: 0;
   margin: 1rem 0 0;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
-  transition: $transition-duration ease-in-out;
+  transition: max-height $transition-duration ease-in-out;
   @include breakpoint-up {
     margin: 1rem 1rem 0;
   }
 
   span {
     display: block;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.25rem;
+    @include breakpoint-up {
+      padding: 1.5rem 2rem;
+    }
   }
 }
