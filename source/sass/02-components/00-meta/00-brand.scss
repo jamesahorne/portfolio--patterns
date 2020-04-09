@@ -5,13 +5,13 @@
 .c-brand__link {
   @include header-link-transition(4);
   transition: all $transition;
-  @include breakpoint-up(24) {
+  @include breakpoint-up(22) {
     font-size: fontSize(1);
   }
-  @include breakpoint-up($sm) {
+  @include breakpoint-up(26) {
     font-size: fontSize(2);
   }
-  @include breakpoint-up {
+  @include breakpoint-up($sm) {
     font-size: fontSize(3);
   }
   @include breakpoint-up($lg) {

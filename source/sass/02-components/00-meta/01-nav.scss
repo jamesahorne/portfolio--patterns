@@ -4,11 +4,11 @@
 
 .c-nav__item {
   margin-right: 0.5rem;
-  @include breakpoint-up(24) {
-    font-size: fontSize(1);
-  }
   @include breakpoint-up(25) {
     margin-right: 0.5rem;
+  }
+  @include breakpoint-up(26) {
+    font-size: fontSize(1);
   }
   @include breakpoint-up($sm) {
     font-size: fontSize(2);
