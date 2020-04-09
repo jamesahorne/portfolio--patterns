@@ -3,7 +3,7 @@
 const accordionComponent = document.getElementById('c-accordion');
 
 // If it doesn't exist you get a console error (if it isn't "undefined" and it isn't "null", then it exists)
-if(typeof(accordionComponent) != 'undefined' && accordionComponent != null){
+if (typeof(accordionComponent) != 'undefined' && accordionComponent != null) {
   const allAccordions = document.getElementsByClassName('c-accordion__button');
   const activeAccordions = document.getElementsByClassName('c-accordion__button c-accordion__button--is-active');
   const firstAccordion = allAccordions[0];
@@ -45,12 +45,3 @@ if(typeof(accordionComponent) != 'undefined' && accordionComponent != null){
 }
 
 //            End accordion            //
-
-
-
-
-
-// TODO
-// 
-// Accessibility
-//   Check on mobile too
