@@ -1,0 +1,39 @@
+.footer {
+  text-align: center;
+  padding: 2rem;
+  transition: $transition;
+  &:hover {
+    .footer__content {
+      width: 100%;
+    }
+
+    span {
+      opacity: 0;
+    }
+
+    p {
+      opacity: 1;
+    }
+  }
+
+  .footer__content {
+    display: inline-block;
+    background-color: $colour-black-50;
+    padding: 2rem;
+    position: relative;
+  }
+
+  span {
+    transition: $transition;
+  }
+
+  p {
+    display: inline-block;
+    opacity: 0;
+    width: calc(100% - 4rem);
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transition: $transition;
+  }
+}
