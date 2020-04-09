@@ -21,7 +21,7 @@
   @include breakpoint-up($sm) {
     max-width: 39.375rem;
     min-height: 891px;
-    margin: 3rem auto 4.5rem;
+    margin: 4rem auto 4.5rem;
   }
 }
 
@@ -63,7 +63,7 @@
 .cv__primary {
   grid-area: primary;
   > * {
-    @include border(bottom);
+    @include cv-border(bottom);
     @include breakpoint-up($sm) {
       &:last-child {
         margin-bottom: 0;
@@ -75,10 +75,10 @@
 .cv__secondary {
   grid-area: secondary;
   > * {
-    @include border(bottom);
+    @include cv-border(bottom);
     @include breakpoint-up($sm) {
       &:first-child {
-        @include border(top);
+        @include cv-border(top);
       }
       &:last-child {
         margin-bottom: 0;

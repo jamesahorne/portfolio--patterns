@@ -86,7 +86,7 @@
 }
 
 // CV
-@mixin border($alignment) {
+@mixin cv-border($alignment) {
   border-#{$alignment}: $cv-border;
   @if $alignment == 'top' {
     margin-#{$alignment}: 0.5rem;
