@@ -1,12 +1,13 @@
 .footer {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   transition: $transition;
   @include breakpoint-up {
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
   &:hover {
     .footer__content {
+      border-color: $colour-primary-400;
       width: 100%;
       transition-delay: 0s;
     }
@@ -27,22 +28,24 @@
 
   .footer__content {
     display: inline-block;
-    background-color: $colour-black-50;
     padding: 1rem;
-    width: 62px;
-    border-radius: 62px;
+    width: 82px;
+    border: 2px solid $colour-black-300;
+    border-radius: 82px;
     position: relative;
     transition: $transition;
     transition-delay: .15s;
     @include breakpoint-up {
       padding: 2rem;
-      width: 110px;
-      border-radius: 110px;
+      width: 114px;
+      border-radius: 114px;
     }
   }
 
   span {
-    font-size: fontSize(1);
+    color: $colour-black-400;
+    font-size: fontSize(3);
+    font-weight: $font-weight-semi-bold;
     transition: $transition;
     transition-delay: $transition-duration;
     @include breakpoint-up {
