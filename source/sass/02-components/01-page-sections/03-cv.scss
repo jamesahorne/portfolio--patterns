@@ -34,6 +34,9 @@
   font-weight: 300;
   font-size: $cv-fs-xl;
   margin-bottom: 0.25rem;
+  @include breakpoint-up($sm) {
+    font-size: $cv-fs-xxl;
+  }
 }
 
 .cv__subtitle {
@@ -133,7 +136,7 @@
     }
   }
   &--skills {
-    @include breakpoint-up($sm) {
+    @include breakpoint-up {
       column-count: 2;
     }
   }
