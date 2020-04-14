@@ -1,8 +1,8 @@
-.c-nav__list {
+.nav__list {
   display: flex;
 }
 
-.c-nav__item {
+.nav__item {
   margin-right: 0.5rem;
   @include breakpoint-up(25) {
     margin-right: 0.5rem;
@@ -19,7 +19,7 @@
   &:last-child {
     margin-right: 0;
 
-    .c-nav__link {
+    .nav__link {
       padding-right: 0;
     }
   }
@@ -42,7 +42,7 @@
   }
 }
 
-.c-nav__link {
+.nav__link {
   @include header-link-transition;
   text-transform: lowercase;
 	position: relative;

@@ -1,4 +1,4 @@
-.c-home {
+.home {
   min-height: calc(100vh - 43px);
   padding-top: calc(40vh - 43px);
   @include breakpoint-up(24) {
@@ -19,7 +19,7 @@
   }
 }
 
-.c-home__title {
+.home__title {
   position: relative;
   width: fit-content;
   font-size: fontSize(2);
@@ -33,25 +33,25 @@
   }
 }
 
-.c-home__text {
+.home__text {
   display: block;
   opacity: 0;
   animation: fade-in 2s forwards;
   &--primary {
     animation-delay: 1.79s;
-    .c-home__text--full-stop {
+    .home__text--full-stop {
       color: $colour-primary-400;
     }
   }
   &--secondary {
     animation-delay: 4.2s;
-    .c-home__text--full-stop {
+    .home__text--full-stop {
       color: $colour-secondary-400;
     }
   }
 }
 
-.c-home__block {
+.home__block {
   display: block;
   width: 0%;
   height: calc(50% - 5px);

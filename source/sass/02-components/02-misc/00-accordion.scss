@@ -1,11 +1,11 @@
-.c-accordion {
+.accordion {
   @include breakpoint-up {
     display: flex;
     position: relative;
   }
 }
 
-.c-accordion__border {
+.accordion__border {
   @include breakpoint-between(0, $md) {
     display: none;
   }
@@ -17,17 +17,17 @@
   }
 }
 
-.c-accordion__section {
+.accordion__section {
   flex: 1;
   transition: height $transition-duration ease-in-out;
 }
 
-.c-accordion__heading {
+.accordion__heading {
   @include font-sizing-default;
   font-weight: $font-weight-normal;
 }
 
-.c-accordion__button {
+.accordion__button {
   cursor: pointer;
   padding: 1rem;
   width: 100%;
@@ -84,7 +84,7 @@
   }
 }
 
-.c-accordion__panel {
+.accordion__panel {
   padding: 0 1rem;
   max-height: 0;
   overflow: hidden;
@@ -96,7 +96,7 @@
   }
 }
 
-.c-accordion__contents {
+.accordion__contents {
   background-color: $colour-white;
   margin: 0.5rem 0 1.5rem;
   padding: 1.5rem 2rem;
@@ -104,7 +104,7 @@
   box-shadow: $box-shadow;
 }
 
-.c-accordion__description {
+.accordion__description {
   @include breakpoint-between(0, $md) {
     display: none;
   }
