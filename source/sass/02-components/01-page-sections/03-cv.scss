@@ -7,10 +7,9 @@
 
 .cv__main {
   margin: 2rem 0 3rem;
-  padding: 0 2rem;
   @include breakpoint-up($sm) {
     position: relative;
-    max-width: 39.375rem;
+    max-width: 40.625rem;
     min-height: 891px;
     margin: 4rem auto 4.5rem;
     padding: 2rem;
@@ -136,7 +135,13 @@
     }
   }
   &--skills {
-    @include breakpoint-up {
+    @include breakpoint-up(23.4) {
+      column-count: 2;
+    }
+    @include breakpoint-up($sm) {
+      column-count: 1;
+    }
+    @include breakpoint-up(42.5) {
       column-count: 2;
     }
   }
