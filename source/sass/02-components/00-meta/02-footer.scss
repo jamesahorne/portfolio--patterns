@@ -9,7 +9,6 @@
     .footer__content {
       border-color: $colour-primary-400;
       width: 100%;
-      transition-delay: 0s;
     }
 
     span {
@@ -30,11 +29,11 @@
     display: inline-block;
     padding: 1rem;
     width: 82px;
+    max-width: 48rem;
     border: 2px solid $colour-black-300;
     border-radius: 82px;
     position: relative;
     transition: $transition;
-    transition-delay: .15s;
     @include breakpoint-up {
       padding: 2rem;
       width: 114px;
@@ -47,7 +46,7 @@
     font-size: fontSize(3);
     font-weight: $font-weight-semi-bold;
     transition: $transition;
-    transition-delay: $transition-duration;
+    transition-delay: .25s;
     @include breakpoint-up {
       font-size: fontSize(3);
     }
