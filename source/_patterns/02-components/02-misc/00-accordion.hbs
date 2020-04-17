@@ -1,61 +1,25 @@
 <div class="accordion"
      id="accordion"
 >
+  {{#each accordion}}
   <div class="accordion__section">
     <h3 class="accordion__heading">
       <button class="accordion__button"
-              id="accordion__button--1"
+              id="accordion__button--{{ this.id }}"
               aria-expanded="false"
-              aria-controls="accordion__panel--1"
+              aria-controls="accordion__panel--{{ this.id }}"
       >
-        Heading 1
+        {{ this.heading }}
       </button>
     </h3>
     <div class="accordion__panel"
-         id="accordion__panel--1"
+         id="accordion__panel--{{ this.id }}"
          role="region"
-         aria-labelledby="accordion__button--1"
+         aria-labelledby="accordion__button--{{ this.id }}"
     >
-      <p class="accordion__contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sint, minima amet architecto, perferendis aperiam possimus, maiores eius ea recusandae provident est ut eos saepe et molestias <a class="u-link" href="#">iusto dolores</a> a ratione!</p>
+      <p class="accordion__contents">{{ this.contents }}</p>
     </div>
   </div>
-  <span class="accordion__border"></span>
-  <div class="accordion__section">
-    <h3 class="accordion__heading">
-      <button class="accordion__button"
-              id="accordion__button--2"
-              aria-expanded="false"
-              aria-controls="accordion__panel--2"
-      >
-        Heading 2
-      </button>
-    </h3>
-    <div class="accordion__panel"
-         id="accordion__panel--2"
-         role="region"
-         aria-labelledby="accordion__button--2"
-    >
-      <p class="accordion__contents">Lorem ipsum dolor <a class="u-link" href="#">sit amet</a> consectetur adipisicing elit. Perspiciatis sint, minima amet architecto, perferendis aperiam possimus, maiores eius ea recusandae provident est ut eos saepe et molestias iusto dolores a ratione! Ab tempora placeat sint distinctio non veniam eaque hic accusamus, eius fuga ex eos modi minima ducimus, omnis quos.</p>
-    </div>
-  </div>
-  <span class="accordion__border"></span>
-  <div class="accordion__section">
-    <h3 class="accordion__heading">
-      <button class="accordion__button"
-              id="accordion__button--3"
-              aria-expanded="false"
-              aria-controls="accordion__panel--3"
-      >
-        Heading 3
-      </button>
-    </h3>
-    <div class="accordion__panel"
-         id="accordion__panel--3"
-         role="region"
-         aria-labelledby="accordion__button--3"
-    >
-      <p class="accordion__contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sint, minima amet architecto, <a class="u-link" href="#">perferendis</a> aperiam possimus.</p>
-    </div>
-  </div>
+  {{/each}}
   <p class="accordion__description">Click on a technology for more info.</p>
 </div>
