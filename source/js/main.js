@@ -45,3 +45,13 @@ if (typeof(accordionComponent) != 'undefined' && accordionComponent != null) {
 }
 
 //            End accordion            //
+
+//            Contact role details            //
+
+// Don't want to style a utility class inside a component so using JS to style it...
+// But maybe this is too purist and I'll change my mind in a year's time.
+const roleDetailsParent = document.getElementById('contact__role-details').parentNode;
+
+roleDetailsParent.style.position = 'relative';
+
+//            End contact role details            //
