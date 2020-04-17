@@ -1,13 +1,15 @@
 .l-main {
   & > * {
     &:nth-child(n + 2) {
+      position: relative;
       &:before {
         content: '';
         display: inline-block;
         width: 50px;
         height: 2px;
         border-top: 2px solid $colour-primary-300;
-        position: relative;
+        position: absolute;
+        top: -2px;
         left: 50%;
         transform: translateX(-50%);
       }
