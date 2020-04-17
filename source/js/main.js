@@ -17,7 +17,6 @@ if (typeof(accordionComponent) != 'undefined' && accordionComponent != null) {
       let prevAccordion = activeAccordions[0] || firstAccordion;
       let prevAccordionSection = prevAccordion.parentNode.parentNode;
       let prevPanel = prevAccordion.parentNode.nextElementSibling;
-      const accordionBorders = document.getElementsByClassName('accordion__border');
 
       // If active, close it, else, first close previous accordion and then open current one
       if (isActiveAccordion) {
@@ -35,10 +34,6 @@ if (typeof(accordionComponent) != 'undefined' && accordionComponent != null) {
         this.setAttribute('aria-expanded', 'true');
         panel.style.maxHeight = panel.scrollHeight + 24 + 'px';
         accordionSection.style.height = panel.scrollHeight + accordionHeight + 'px';
-      }
-
-      for (var border of accordionBorders) {
-        border.style.height = accordionHeight - 32 + 'px';
       }
     });
   }
