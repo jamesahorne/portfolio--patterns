@@ -3,19 +3,23 @@
   justify-content: space-between;
   align-items: baseline;
   height: 43px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem 0.5rem 1rem;
   @include breakpoint-up(24) {
     height: 49px;
   }
+  @include breakpoint-up(25) {
+    padding-right: 0.5rem;
+  }
   @include breakpoint-up($sm) {
-    padding: 1rem;
+    padding: 1rem 0.5rem 1rem 1rem;
     height: 74px;
   }
   @include breakpoint-up {
-    padding: 1rem 4rem;
+    padding: 1rem 3.25rem 1rem 4rem;
     height: 78px;
   }
   @include breakpoint-up($lg) {
     height: 90px;
+    padding-right: 3rem;
   }
 }
