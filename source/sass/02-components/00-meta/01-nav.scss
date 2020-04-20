@@ -18,14 +18,16 @@
   }
   &:last-child {
     margin-right: 0;
-
-    .nav__link {
-      padding-right: 0;
-    }
   }
   &--home {
     display: none;
     @include breakpoint-up($lg) {
+      display: block;
+    }
+  }
+  &--about {
+    display: none;
+    @include breakpoint-up($xl) {
       display: block;
     }
   }
@@ -59,9 +61,6 @@
   @include breakpoint-up($lg) {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  &:last-child {
-    margin-right: 0;
   }
   &:hover {
     animation: wobble 0.667s ease-in-out;
