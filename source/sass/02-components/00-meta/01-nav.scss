@@ -29,6 +29,12 @@
       display: block;
     }
   }
+  &--about {
+    display: none;
+    @include breakpoint-up($xl) {
+      display: block;
+    }
+  }
   &--cv {
     @include breakpoint-between(0, $md) {
       margin-right: 0;
