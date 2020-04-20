@@ -1,0 +1,77 @@
+.home {
+  min-height: calc(100vh - 43px);
+  padding-top: calc(40vh - 43px);
+  @include breakpoint-up(24) {
+    min-height: calc(100vh - 49px);
+    padding-top: calc(40vh - 49px);
+  }
+  @include breakpoint-up(36) {
+    min-height: calc(100vh - 74px);
+    padding-top: calc(40vh - 74px);
+  }
+  @include breakpoint-up(48) {
+    min-height: calc(100vh - 78px);
+    padding-top: calc(40vh - 78px);
+  }
+  @include breakpoint-up(64) {
+    min-height: calc(100vh - 90px);
+    padding-top: calc(30vh - 90px);
+  }
+}
+
+.home__title {
+  position: relative;
+  width: fit-content;
+  font-size: fontSize(2);
+  font-weight: $font-weight-semi-bold;
+  line-height: $line-height-sm;
+  @include breakpoint-up {
+    font-size: fontSize(3);
+  }
+  @include breakpoint-up($lg) {
+    font-size: fontSize(4);
+  }
+}
+
+.home__text {
+  display: block;
+  opacity: 0;
+  animation: fade-in 2s forwards;
+  &--primary {
+    animation-delay: 1.79s;
+    .home__text--full-stop {
+      color: $colour-primary-400;
+    }
+  }
+  &--secondary {
+    animation-delay: 4.2s;
+    .home__text--full-stop {
+      color: $colour-secondary-400;
+    }
+  }
+}
+
+.home__block {
+  display: block;
+  width: 0%;
+  height: calc(50% - 5px);
+  position: absolute;
+  left: 0;
+  animation: home-block 2s cubic-bezier(.74, .06, .4, .92);
+  @include breakpoint-up {
+    height: calc(50% - 6px);
+  }
+  &--primary {
+    background-color: $colour-primary-400;
+    top: 6px;
+    animation-delay: 0.5s;
+    @include breakpoint-up {
+      top: 7px;
+    }
+  }
+  &--secondary {
+    background-color: $colour-secondary-400;
+    bottom: -1px;
+    animation-delay: 3s;
+  }
+}

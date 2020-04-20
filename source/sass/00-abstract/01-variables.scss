@@ -1,164 +1,43 @@
-/*------------------------------------*\
-    #VARIABLES
-\*------------------------------------*/
+// Breakpoints
+$sm: 36;
+$md: 48;
+$lg: 64;
+$xl: 75;
+$xxl: 90;
 
-/**
- * CONTENTS
- *
- * COLORS
- * Brand Colors...............Globally-available variables and config
- * Neutral Colors.............Grayscale colors, including white and black
- * Utility Colors.............Info, Warning, Error, Success
- *
- * TYPOGRAPHY
- * Font Families..............The fonts used in the design system
- * Sizing.....................Font sizing
- *
- * LAYOUT
- * Max-widths.................Maximum layout container width
- *
+// Type scale
+$size-default: 16px;
+$size-scale: 1.25;
 
- * SPACING
- * Spacing defaults...........Spacing between elements
- *
- * BORDERS
- * Border Width...............Border thicknesses
- * Border Radius..............Border radius definitions
- *
- * ANIMATION
- * Animation Speed............Transition/animation speed variables
- * Animation easing...........Easing variables
- *
- * BREAKPOINTS
- * Breakpoints................Global breakpoint definitions
- */
+// Font weight
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
 
-/*------------------------------------*\
-     #COLORS
- \*------------------------------------*/
+// Letter spacing
+$letter-spacing: 0.05rem;
 
-/**
- * Brand Colors
- * 1) Brand=specific colors
- */
-$color-brand-blue: #0000ff;
+// Transitions
+$transition-duration: 0.3s;
+$transition-timing: cubic-bezier(.74, .06, .4, .92);
+$transition: $transition-duration $transition-timing;
 
-/**
- * Neutral Colors
- * 1) Neutral colors are grayscale values used throughout the UI
- */
-$color-neutral-white: #fff;
-$color-neutral-gray-02: #f9f9f9;
-$color-neutral-gray-07: #eee;
-$color-neutral-gray-13: #ddd;
-$color-neutral-gray-27: #bbb;
-$color-neutral-gray-50: #808080;
-$color-neutral-gray-60: #666;
-$color-neutral-gray-73: #444;
-$color-neutral-gray-93: #131313;
-$color-neutral-black: #000;
+// Borders
+$border-radius: 5px;
 
-/**
- * Utility Colors
- * 1) Utility colors are colors used to provide feedback, such as alert messages,
- *    form validation, etc.
- */
-$color-utility-info: #0192d0;
-$color-utility-error: #b12a0b;
-$color-utility-success: #03804d;
-$color-utility-warning: #a59b15;
+// Box Shadow
+$box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.04), 0px 9px 16px rgba(0, 0, 0, 0.07), 0px 9px 20px rgba(0, 0, 0, 0.01);
 
-/*------------------------------------*\
-    #TYPOGRAPHY
-\*------------------------------------*/
+// Line height
+$line-height: 1.5;
+$line-height-sm: 1.3;
 
-/**
- * Font Family
- */
-$font-family-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-family-secondary: serif;
-
-/**
- * Font Sizing
- */
-$font-size-sm: 0.75rem;
-$font-size-sm-2: 0.85rem;
-$font-size-med: 1rem;
-$font-size-med-2: 1.2rem;
-$font-size-large: 2rem;
-$font-size-xl: 3rem;
-
-/**
- * Line Height
- */
-$line-height-sm: 0.8;
-$line-height-sm-2: 0.9;
-$line-height-med: 1;
-$line-height-med-2: 1.2;
-$line-height-large: 1.6;
-$line-height-xl: 1.8;
-
-/*------------------------------------*\
-    #LAYOUT
-\*------------------------------------*/
-
-/**
- * Max Width
- */
-$l-max-width: 60rem !default;
-$l-linelength-width: 36rem !default;
-
-/*------------------------------------*\
-    #SPACING
-\*------------------------------------*/
-
-/**
- * Spacing and offsets
- * 1) Used to space grids and body padding
- */
-
-$spacing: 1rem;
-$spacing-small: round(0.5 * $spacing);
-$spacing-large: round(2 * $spacing);
-
-/*------------------------------------*\
-    #BORDERS
-\*------------------------------------*/
-
-/**
- * Border widths
- */
-$border-width: 1px;
-
-/**
- * Border radius
- */
-$border-radius: 8px;
-
-/*------------------------------------*\
-    #ANIMATION
-\*------------------------------------*/
-
-/**
- * Transition Speed
- */
-$anim-fade-quick: 0.15s;
-$anim-fade-long: 0.4s;
-
-/**
- * Transition Ease
- */
-$anim-ease: ease-out;
-
-/*------------------------------------*\
-    #BREAKPOINTS
-\*------------------------------------*/
-
-/**
- * Breakpoints used in media queries
- * 1) These are not the only breakpoints used, but they provide a few defaults
- */
-$bp-small: 28em;
-$bp-med: 47em;
-$bp-large: 60em;
-$bp-xl: 70em;
+// CV
+$cv-border: 2px solid $colour-primary-400;
+$cv-fs-xs: 0.75rem;
+$cv-fs-sm: 0.875rem;
+$cv-fs-md: 1rem;
+$cv-fs-lg: 1.25rem;
+$cv-fs-xl: 1.75rem;
+$cv-fs-xxl: 2.5rem;

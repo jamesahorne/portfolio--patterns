@@ -1,0 +1,145 @@
+.accordion {
+  @include breakpoint-up {
+    display: flex;
+    position: relative;
+  }
+}
+
+.accordion__border {
+  @include breakpoint-between(0, $md) {
+    display: none;
+  }
+  @include breakpoint-up {
+    margin: 1rem 0;
+    width: 2px;
+    background-color: $colour-primary-400;
+    border-radius: $border-radius;
+  }
+}
+
+.accordion__section {
+  flex: 1;
+  transition: height $transition-duration ease-in-out;
+  &:last-of-type {
+    @include breakpoint-up {
+      .accordion__heading {
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.accordion__heading {
+  @include font-sizing-default;
+  font-weight: $font-weight-normal;
+  @include breakpoint-up {
+    position: relative;
+  }
+  &:after {
+    @include breakpoint-up {
+      content: '';
+      display: block;
+      margin: 1rem 0;
+      width: 2px;
+      height: 30px;
+      background-color: $colour-primary-400;
+      border-radius: $border-radius;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.accordion__button {
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  transition: color $transition;
+  @include breakpoint-between(0, $md) {
+    text-align: left;
+  }
+  &:hover {
+    color: $colour-primary-500;
+  }
+  &:after {
+    @include breakpoint-between(0, $md) {
+      content: '\02795';
+      font-size: 0.75rem;
+      float: right;
+      height: 14px;
+      padding: 4px 0 4px 3px;
+    }
+  }
+  &--is-active {
+    @include breakpoint-up {
+      position: relative;
+    }
+    &:before {
+      @include breakpoint-up {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: $colour-white;
+        transform: rotate(45deg);
+        top: 59px;
+        left: calc((100% - 20px) / 2);
+        z-index: 1;
+        box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.07);
+      }
+    }
+    &:after {
+      @include breakpoint-between(0, $md) {
+        content: "\2796";
+      }
+      @include breakpoint-up {
+        content: "";
+        position: absolute;
+        width: calc(100% - 3rem);
+        height: 20px;
+        background: $colour-white;
+        top: 71px;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.accordion__panel {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $transition-duration ease-in-out;
+  @include breakpoint-up {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.accordion__contents {
+  background-color: $colour-white;
+  margin: 0.5rem 0 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+.accordion__description {
+  @include breakpoint-between(0, $md) {
+    display: none;
+  }
+  @include breakpoint-up {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    z-index: -1;
+  }
+}

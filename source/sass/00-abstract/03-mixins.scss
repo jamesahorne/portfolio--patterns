@@ -1,57 +1,128 @@
-/*------------------------------------*\
-    #MIXINS
-\*------------------------------------*/
-
-/**
- * Body Styles 
- * 1) Prevent Mobile Safari from scaling up text: https://blog.55minutes.com/2012/04/iphone-text-resizing/
- */
-@mixin typographyBody() {
-	font-size: $font-size-med;
-	line-height: 1.6;
-	-webkit-text-size-adjust: 100%; /* 1 */
+// Breakpoints
+@mixin breakpoint-up($breakpoint: $md) {
+  @media (min-width: #{$breakpoint}rem) {
+    @content;
+  }
+}
+@mixin breakpoint-between($breakpoint-min, $breakpoint-max) {
+  @media (min-width: #{$breakpoint-min}rem) and (max-width: #{$breakpoint-max - 0.001}rem) {
+    @content;
+  }
 }
 
-/**
- * XL Type Styles
- */
-@mixin typographyBodyLarge() {
-	font-size: $font-size-med-2;
-	line-height: $line-height-large;
+// Fonts
+@mixin font-sizing-default {
+  font-size: fontSize(0);
+  @include breakpoint-up {
+    font-size: fontSize(1);
+  }
 }
 
-/**
- * XL Heading Styles
- */
-@mixin typographyHeadingXl() {
-	font-size: $font-size-xl;
-	font-weight: normal;
-	line-height: 1.2;
+@mixin font-primary {
+  font-family: 'Open Sans', sans-serif, Arial;
 }
 
-/**
- * Large Heading Styles
- */
-@mixin typographyHeadingLarge() {
-	font-size: $font-size-large;
-	font-weight: normal;
-	line-height: 1.2;
+@mixin font-secondary($level: 1) {
+  font-family: 'Baloo 2', sans-serif, Arial;
+  font-weight: 500;
+  @if $level == 2 {
+    font-size: fontSize(1);
+    margin: 1.5rem 0 0.75rem;
+    @include breakpoint-up {
+      font-size: fontSize(2);
+      margin: 1.75rem 0 1rem;
+    }
+  } @else if $level == 3 {
+    font-size: fontSize(0);
+    margin: 1rem 0 0.75rem;
+    @include breakpoint-up {
+      font-size: fontSize(1);
+      margin: 1.5rem 0 1rem;
+    }
+  } @else {
+    font-size: fontSize(2);
+    margin: 2rem 0 1rem;
+    @include breakpoint-up {
+      font-size: fontSize(3);
+      margin: 2.5rem 0 1.25rem;
+    }
+  }
 }
 
-/**
- * Medium 2 Heading Styles
- */
-@mixin typographyHeadingMed2() {
-	font-size: $font-size-med-2;
-	font-weight: normal;
-	line-height: 1.2;
+@mixin font-logo {
+  font-family: 'Lalezar', sans-serif, Arial;
+  letter-spacing: $letter-spacing;
 }
 
-/**
- * Medium Heading Styles
- */
-@mixin typographyHeadingMed() {
-	font-size: $font-size-med;
-	font-weight: normal;
-	line-height: 1.2;
+// Transitions
+@mixin header-link-transition($bottom: -10) {
+  position: relative;
+  &:hover,
+  &:focus,
+  &:active {
+    &:before,
+    &:after {
+      width: 10px;
+      transition-delay: $transition-duration;
+    }
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0px;
+    height: 2px;
+    background-color: $colour-primary-400;
+		position: absolute;
+    left: 50%;
+    bottom: #{$bottom}px;
+    transition: width $transition;
+    transition-delay: 0s;
+  }
+  &:before {
+    transform: translateX(-50%) rotate(40deg);
+  }
+  &:after {
+    transform: translateX(-50%) rotate(140deg);
+  }
+}
+
+// CV
+@mixin cv-border($alignment) {
+  border-#{$alignment}: $cv-border;
+  @if $alignment == 'top' {
+    margin-#{$alignment}: 0.5rem;
+  } @else {
+    margin-#{$alignment}: 1.5rem;
+  }
+  padding-#{$alignment}: 1.5rem;
+}
+
+// Links
+@mixin u-link {
+	display: inline-flex;
+	color: $colour-black-500;
+	position: relative;
+	overflow: hidden;
+	transition: color $transition;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $colour-primary-500;
+		&:after {
+			transform: translateX(-105%);
+		}
+	}
+	&:after {
+		content: "";
+		width: 100%;
+		height: 2px;
+		background-color: $colour-primary-400;
+		border-radius: $border-radius;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transform: translateX(0);
+		transition: transform $transition;
+	}
 }

@@ -1,0 +1,31 @@
+.brand {
+  @include font-logo;
+}
+
+.brand__link {
+  @include header-link-transition(4);
+  transition: all $transition;
+  @include breakpoint-up(22) {
+    font-size: fontSize(1);
+  }
+  @include breakpoint-up(26) {
+    font-size: fontSize(2);
+  }
+  @include breakpoint-up($sm) {
+    font-size: fontSize(3);
+  }
+  @include breakpoint-up($lg) {
+    font-size: fontSize(4);
+  }
+  &--highlighted {
+    margin: 0 1px;
+    @include breakpoint-up {
+      margin: 0 2px;
+    }
+  }
+  &--colour {
+    color: $colour-primary-400;
+    transition: all $transition;
+  }
+
+}

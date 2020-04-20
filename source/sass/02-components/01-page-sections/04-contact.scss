@@ -1,0 +1,31 @@
+.contact__role {
+  @include u-link;
+  &:hover ~ .contact__role-details,
+  &:focus ~ .contact__role-details,
+  &:active ~ .contact__role-details {
+    max-height: 100px;
+  }
+}
+
+.contact__role-details {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  transition: max-height $transition-duration ease-in-out;
+
+  span {
+    display: block;
+    padding: 1rem 1.25rem;
+    @include breakpoint-up {
+      padding: 1.5rem 2rem;
+    }
+  }
+}

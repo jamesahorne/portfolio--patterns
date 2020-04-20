@@ -1,7 +1,23 @@
-body {
-  font-family: 'Open Sans', sans-serif, Arial;
-	color: black;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.u-heading-1  {
+  @include font-secondary(1);
+}
+
+.u-heading-2  {
+  @include font-secondary(2);
+}
+
+.u-heading-3  {
+  @include font-secondary(3);
+  &--center {
+    text-align: center;
+  }
+}
+
+.u-text {
+  margin-bottom: 0.75rem;
+  &--center {
+    @include breakpoint-between(0, $md) {
+      text-align: center;
+    }
+  }
 }
