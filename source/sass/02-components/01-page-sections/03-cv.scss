@@ -6,12 +6,12 @@
 }
 
 .cv__main {
-  margin: 2rem 0 3rem;
+  margin-top: 2rem;
   @include breakpoint-up($sm) {
     position: relative;
     max-width: 40.625rem;
     min-height: 891px;
-    margin: 4rem auto 4.5rem;
+    margin: 4rem auto 0;
     padding: 2rem;
   }
 }
@@ -70,6 +70,13 @@
   grid-area: secondary;
   > * {
     @include cv-border(bottom);
+    @include breakpoint-between(0, $sm) {
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
     @include breakpoint-up($sm) {
       &:first-child {
         @include cv-border(top);
