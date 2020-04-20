@@ -1,4 +1,4 @@
-.project__image {
+.project-card__image {
   width: 100%;
   height: auto;
   display: block;
@@ -6,7 +6,7 @@
   border-radius: $border-radius;
 }
 
-.project__figure {
+.project-card__figure {
   @include breakpoint-up {
     position: relative;
     &:hover {
@@ -14,7 +14,7 @@
         background-color: $colour-white;
         color: $colour-black-500;
       }
-      .project__caption {
+      .project-card__caption {
         opacity: 1;
       }
     }
@@ -38,7 +38,7 @@
   }
 }
 
-.project__caption {
+.project-card__caption {
   margin-top: 0.75rem;
   @include breakpoint-up {
     font-size: fontSize(0);

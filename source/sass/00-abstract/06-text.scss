@@ -8,6 +8,9 @@
 
 .u-heading-3  {
   @include font-secondary(3);
+  &--center {
+    text-align: center;
+  }
 }
 
 .u-text {
