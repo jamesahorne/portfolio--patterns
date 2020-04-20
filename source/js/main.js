@@ -45,11 +45,46 @@ if (typeof(accordionComponent) != 'undefined' && accordionComponent != null) {
 
 // Don't want to style a utility class inside a component so using JS to style it...
 // But maybe this is too purist and I'll change my mind in a year's time.
-const roleDetails = document.getElementById('contact__role-details');
+const contactRoleDetails = document.getElementById('contact__role-details');
+const contactRole = document.getElementById('contact__role');
 
-if (typeof(roleDetails) != 'undefined' && roleDetails != null) {
-  const roleDetailsParent = roleDetails.parentNode;
-  roleDetailsParent.style.position = 'relative';
+if (typeof(contactRoleDetails) != 'undefined' && contactRoleDetails != null) {
+  const contactRoleDetailsParent = contactRoleDetails.parentNode;
+
+  contactRoleDetailsParent.style.position = 'relative';
+  contactRole.addEventListener("focus", function() {
+    contactRole.setAttribute('aria-expanded', 'true');
+  });
+  contactRole.addEventListener("mouseover", function() {
+    contactRole.setAttribute('aria-expanded', 'true');
+  });
+  contactRole.addEventListener("focusout", function() {
+    contactRole.setAttribute('aria-expanded', 'false');
+  });
+  contactRole.addEventListener("mouseout", function() {
+    contactRole.setAttribute('aria-expanded', 'false');
+  });
 }
 
 //            End contact role details            //
+
+//            Footer            //
+
+const footer = document.getElementById('footer');
+
+if (typeof(footer) != 'undefined' && footer != null) {
+  footer.addEventListener("focus", function() {
+    footer.setAttribute('aria-expanded', 'true');
+  });
+  footer.addEventListener("mouseover", function() {
+    footer.setAttribute('aria-expanded', 'true');
+  });
+  footer.addEventListener("focusout", function() {
+    footer.setAttribute('aria-expanded', 'false');
+  });
+  footer.addEventListener("mouseout", function() {
+    footer.setAttribute('aria-expanded', 'false');
+  });
+}
+
+//            End footer            //

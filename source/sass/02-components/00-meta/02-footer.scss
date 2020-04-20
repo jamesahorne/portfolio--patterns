@@ -5,7 +5,9 @@
   @include breakpoint-up {
     margin: 3.5rem 4rem;
   }
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     .footer__content {
       border-color: $colour-primary-400;
       width: 100%;

@@ -265,14 +265,6 @@
 .cv__layout,
 .cv__primary {
   @include breakpoint-up($sm) {
-    &:hover {
-      &:before {
-        transform: translateX(-50%) rotate(40deg);
-      }
-      &:after {
-        transform: translateX(-50%) rotate(140deg);
-      }
-    }
     &:before,
     &:after {
       content: '';
@@ -289,7 +281,9 @@
 
 .cv__main {
   @include breakpoint-up($sm) {
-    &:hover {
+    &:hover,
+    &:focus-within,
+    &:active {
       &:before {
         transform: translateX(-50%) rotate(40deg);
         left: 0;

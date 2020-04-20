@@ -9,7 +9,9 @@
 .project-card__figure {
   @include breakpoint-up {
     position: relative;
-    &:hover {
+    &:hover,
+    &:focus-within,
+    &:active {
       &:after {
         background-color: $colour-white;
         color: $colour-black-500;

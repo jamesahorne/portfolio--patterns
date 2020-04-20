@@ -13,7 +13,9 @@
 		margin-left: 0;
 		margin-right: 0;
 	}
-	&:hover {
+	&:hover,
+	&:focus,
+	&:active {
 		color: $colour-primary-500;
 		&:before,
 		&:after,
