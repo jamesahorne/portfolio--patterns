@@ -1,4 +1,5 @@
 .home {
+  position: relative;
   min-height: calc(100vh - 43px);
   padding-top: calc(40vh - 43px);
   @include breakpoint-up(24) {
@@ -16,6 +17,59 @@
   @include breakpoint-up(64) {
     min-height: calc(100vh - 90px);
     padding-top: calc(30vh - 90px);
+  }
+  &:before {
+    content: '';
+    width: calc(8rem + 5vw);
+    height: calc(8rem + 5vw);
+    position: absolute;
+    bottom: -3rem;
+    left: 30%;
+    border: 0.125rem solid $colour-primary-400;
+    border-radius: 50%;
+    @include breakpoint-up($xl) {
+      width: 12rem;
+      height: 12rem;
+      left: 30%;
+    }
+  }
+  &:after {
+    content: '';
+    width: calc(3rem + 2.5vw);
+    height: calc(3rem + 2.5vw);
+    position: absolute;
+    bottom: calc(3rem + 3vw);
+    left: calc(30% + 6rem + 4vw);
+    border: 0.1875rem solid $colour-secondary-400;
+    border-radius: 50%;
+    @include breakpoint-up($xl) {
+      width: 5rem;
+      height: 5rem;
+      bottom: 6rem;
+      left: calc(30% + 8rem);
+    }
+  }
+  & > * {
+    &:before {
+      content: '';
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      top: 5rem;
+      left: 65%;
+      border: 0.125rem solid $colour-primary-400;
+      border-radius: 50%;
+    }
+    &:after {
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      top: 6rem;
+      left: calc(65% - 1.5rem);
+      border: 0.1875rem solid $colour-secondary-400;
+      border-radius: 50%;
+    }
   }
 }
 
