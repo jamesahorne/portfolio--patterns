@@ -3,6 +3,47 @@
   color: $colour-black-500;
   font-size: $cv-fs-sm;
   position: relative;
+  &:before {
+    content: '';
+    width: calc(7rem + 7vw);
+    height: calc(7rem + 7vw);
+    position: absolute;
+    bottom: calc(-6rem - 5.5vw);
+    right: 0.5rem;
+    border: 0.125rem solid $colour-primary-400;
+    border-radius: 50%;
+    @include breakpoint-up($xl) {
+      width: 12rem;
+      height: 12rem;
+      bottom: -10rem;
+      left: calc(50% + 33.5vw);
+    }
+    @include breakpoint-up($xxl) {
+      left: calc(50% + 30rem);
+    }
+  }
+  &:after {
+    content: '';
+    width: calc(1rem + 5vw);
+    height: calc(1rem + 5vw);
+    position: absolute;
+    bottom: 2rem;
+    left: calc(50% - 40vw);
+    border: 0.1875rem solid $colour-secondary-400;
+    border-radius: 50%;
+    @include breakpoint-up($sm) {
+      bottom: 1rem;
+    }
+    @include breakpoint-up {
+      bottom: 3rem;
+      left: calc(30% - 13rem);
+    }
+    @include breakpoint-up($xl) {
+      width: 5.5rem;
+      height: 5.5rem;
+      left: calc(50% - 30rem);
+    }
+  }
 }
 
 .cv__main {

@@ -1,3 +1,28 @@
+.technologies {
+  position: relative;
+  &:before {
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 0rem;
+    right: 60%;
+    border: 0.125rem solid $colour-primary-400;
+    border-radius: 50%;
+  }
+  &:after {
+    content: '';
+    width: calc((4rem + 8vw) / 2);
+    height: calc(4rem + 8vw);
+    position: absolute;
+    bottom: -8rem;
+    right: 0;
+    border: 0.1875rem solid $colour-secondary-400;
+    border-right: none;
+    border-radius: calc(100% + 75rem) 0 0 calc(100% + 75rem);
+  }
+}
+
 .technologies__accordion {
   margin-top: 2.5rem;
 }
