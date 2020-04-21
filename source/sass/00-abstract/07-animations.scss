@@ -27,18 +27,18 @@
 
 @keyframes home-block {
   0% {
-    width: 0%;
+    width: 0;
     left: 0;
 
   }
   50% {
-    width: 100%;
+    width: calc(100% + 0.25rem);
     left: 0;
 
   }
   100% {
     width: 0;
-    left: 100%;
+    left: calc(100% + 0.25rem);
   }
 }
 
