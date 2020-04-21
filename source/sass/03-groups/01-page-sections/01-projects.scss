@@ -1,3 +1,71 @@
+.projects {
+  position: relative;
+  &:before {
+    content: '';
+    width: calc(3rem + 4vw);
+    height: calc(3rem + 4vw);
+    position: absolute;
+    bottom: 0rem;
+    left: calc(50% + 25vw);
+    border: 0.125rem solid $colour-primary-400;
+    border-radius: 50%;
+    @include breakpoint-up($xl) {
+      width: 7rem;
+      height: 7rem;
+      bottom: 0rem;
+      left: calc(50% + 18rem);
+    }
+  }
+  &:after {
+    content: '';
+    width: calc(2rem + 2vw);
+    height: calc(2rem + 2vw);
+    position: absolute;
+    bottom: -2rem;
+    left: calc(50% + 5vw);
+    border: 0.1875rem solid $colour-secondary-400;
+    border-radius: 50%;
+    @include breakpoint-up($xl) {
+      width: 4rem;
+      height: 4rem;
+      bottom: -3rem;
+      left: calc(50% + 4.5rem);
+    }
+  }
+  & > * {
+    &:before {
+      content: '';
+      width: calc(1rem + 1vw);
+      height: calc(1rem + 1vw);
+      position: absolute;
+      bottom: -3rem;
+      left: calc(50% - 14vw);
+      border: 0.125rem solid $colour-primary-400;
+      border-radius: 50%;
+      @include breakpoint-up($xl) {
+        width: 2rem;
+        height: 2rem;
+        bottom: -4.5rem;
+        left: calc(50% - 11rem);
+      }
+    }
+    &:after {
+      content: '';
+      width: 0.125rem;
+      height: 0.125rem;
+      position: absolute;
+      bottom: -3.5rem;
+      left: calc(50% - 27vw);
+      border: 0.1875rem solid $colour-secondary-400;
+      border-radius: 50%;
+      @include breakpoint-up($xl) {
+        left: calc(50% - 21rem);
+        bottom: -5rem;
+      }
+    }
+  }
+}
+
 .projects__grid {
   margin-top: 1.25rem;
   display: grid;
