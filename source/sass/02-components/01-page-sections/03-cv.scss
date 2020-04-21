@@ -35,13 +35,12 @@
       bottom: 1rem;
     }
     @include breakpoint-up {
-      bottom: 6rem;
+      bottom: 3rem;
       left: calc(30% - 13rem);
     }
     @include breakpoint-up($xl) {
       width: 5.5rem;
       height: 5.5rem;
-      bottom: 10rem;
       left: calc(50% - 30rem);
     }
   }
