@@ -235,6 +235,12 @@
   }
 }
 
+.cv__linked-in {
+  &:before {
+    background-image: url('/images/cv/icon-linked-in.svg');
+  }
+}
+
 .cv__github {
   &:before {
     background-image: url('/images/cv/icon-github.svg');
