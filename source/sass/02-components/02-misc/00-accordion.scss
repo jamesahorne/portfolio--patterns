@@ -46,14 +46,14 @@
   padding: 1rem;
   width: 100%;
   transition: color $transition;
-  @include breakpoint-between(0, $md) {
+  @include breakpoint-down {
     text-align: left;
   }
   &:hover {
     color: $colour-primary-500;
   }
   &:after {
-    @include breakpoint-between(0, $md) {
+    @include breakpoint-down {
       content: '\02795';
       font-size: 0.75rem;
       color: $colour-primary-400;
@@ -81,7 +81,7 @@
       }
     }
     &:after {
-      @include breakpoint-between(0, $md) {
+      @include breakpoint-down {
         content: "\2796";
       }
       @include breakpoint-up {
@@ -120,7 +120,7 @@
 }
 
 .accordion__description {
-  @include breakpoint-between(0, $md) {
+  @include breakpoint-down {
     display: none;
   }
   @include breakpoint-up {

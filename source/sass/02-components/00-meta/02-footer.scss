@@ -52,7 +52,7 @@
     transition-delay: .15s,
                       0s
     ;
-    @include breakpoint-between(0, $sm) {
+    @include breakpoint-down($breakpoint-iphone) {
       font-size: fontSize(-1);
     }
   }

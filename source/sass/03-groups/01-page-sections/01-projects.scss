@@ -71,7 +71,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(18rem, 30rem));
   gap: 2rem;
-  @include breakpoint-between(0, $md) {
+  @include breakpoint-down {
     justify-content: center;
   }
   @include breakpoint-up {

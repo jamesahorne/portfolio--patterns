@@ -111,7 +111,7 @@
   grid-area: secondary;
   > * {
     @include cv-border(bottom);
-    @include breakpoint-between(0, $sm) {
+    @include breakpoint-down($sm) {
       &:last-child {
         margin-bottom: 0;
         padding-bottom: 0;
@@ -183,7 +183,7 @@
     }
   }
   &--skills {
-    @include breakpoint-up(23.4) {
+    @include breakpoint-up($breakpoint-iphone) {
       column-count: 2;
     }
     @include breakpoint-up($sm) {

@@ -32,7 +32,7 @@
     }
   }
   &--cv {
-    @include breakpoint-between(0, $md) {
+    @include breakpoint-down {
       margin-right: 0;
     }
   }
