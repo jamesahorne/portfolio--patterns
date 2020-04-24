@@ -5,18 +5,6 @@
   }
 }
 
-.accordion__border {
-  @include breakpoint-between(0, $md) {
-    display: none;
-  }
-  @include breakpoint-up {
-    margin: 1rem 0;
-    width: 2px;
-    background-color: $colour-primary-400;
-    border-radius: $border-radius;
-  }
-}
-
 .accordion__section {
   flex: 1;
   transition: height $transition-duration ease-in-out;
