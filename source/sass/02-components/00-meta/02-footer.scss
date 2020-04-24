@@ -27,22 +27,6 @@
     }
   }
 
-  .footer__content {
-    display: inline-block;
-    padding: 1rem;
-    width: 82px;
-    max-width: 48rem;
-    border: 2px solid $colour-black-300;
-    border-radius: 82px;
-    position: relative;
-    transition: $transition;
-    @include breakpoint-up {
-      padding: 2rem;
-      width: 114px;
-      border-radius: 114px;
-    }
-  }
-
   span {
     color: $colour-black-400;
     font-size: fontSize(3);
@@ -71,5 +55,21 @@
     @include breakpoint-between(0, $sm) {
       font-size: fontSize(-1);
     }
+  }
+}
+
+.footer__content {
+  display: inline-block;
+  padding: 1rem;
+  width: 82px;
+  max-width: 48rem;
+  border: 2px solid $colour-black-300;
+  border-radius: 82px;
+  position: relative;
+  transition: $transition;
+  @include breakpoint-up {
+    padding: 2rem;
+    width: 114px;
+    border-radius: 114px;
   }
 }
