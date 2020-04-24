@@ -95,15 +95,15 @@
       width: 100%;
     }
   }
-  &--2,
-  &--4 {
-    @include breakpoint-up {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include breakpoint-up($xxl) {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-    }
-  }
+  // &--2,
+  // &--4 {
+  //   @include breakpoint-up {
+  //     grid-template-columns: repeat(2, 1fr);
+  //   }
+  //   @include breakpoint-up($xxl) {
+  //     margin-left: 0;
+  //     margin-right: 0;
+  //     width: 100%;
+  //   }
+  // }
 }
