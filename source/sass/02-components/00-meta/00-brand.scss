@@ -1,9 +1,9 @@
 .brand {
-  @include font-logo;
+  @include font-tertiary;
 }
 
 .brand__link {
-  @include header-link-transition(4);
+  @include header-link-transition(-9);
   transition: all $transition;
   @include breakpoint-up(22) {
     font-size: fontSize(1);
@@ -14,8 +14,12 @@
   @include breakpoint-up($sm) {
     font-size: fontSize(3);
   }
-  @include breakpoint-up($lg) {
+  @include breakpoint-up($xxl) {
     font-size: fontSize(4);
+    &:before,
+    &:after {
+      bottom: -11px;
+    }
   }
   &--highlighted {
     margin: 0 1px;

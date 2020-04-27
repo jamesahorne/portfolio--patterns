@@ -1,14 +1,20 @@
 <div class="project-card">
   <h3 class="u-heading-3 u-heading-3--center">The website's name</h3>
   <figure class="project-card__figure">
-    <img class="project-card__image"
-         src="../../../images/projects/my-portfolio.png"
-         alt="Here is the alt"
-    >
+    <picture>
+      <source srcset="/images/projects/my-portfolio.webp"
+              media="(min-width: 320px)"
+              type="image/webp"
+      >
+      <img class="project-card__image"
+           src="../../../images/projects/my-portfolio.png"
+           alt="Here is the alt"
+      >
+    </picture>
     <figcaption class="project-card__caption">
       <p class="u-text u-text--center">Here is a short description of the website.</p>
       <p class="u-text u-text--center">
-        <a class="u-link u-link--invert-@md" href="#">See for yourself</a>
+        <a class="project-card__link" href="#">See for yourself</a>
       </p>
     </figcaption>
   </figure>

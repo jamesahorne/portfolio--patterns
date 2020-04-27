@@ -5,18 +5,6 @@
   }
 }
 
-.accordion__border {
-  @include breakpoint-between(0, $md) {
-    display: none;
-  }
-  @include breakpoint-up {
-    margin: 1rem 0;
-    width: 2px;
-    background-color: $colour-primary-400;
-    border-radius: $border-radius;
-  }
-}
-
 .accordion__section {
   flex: 1;
   transition: height $transition-duration ease-in-out;
@@ -58,16 +46,19 @@
   padding: 1rem;
   width: 100%;
   transition: color $transition;
-  @include breakpoint-between(0, $md) {
+  @include breakpoint-down {
     text-align: left;
   }
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: $colour-primary-500;
   }
   &:after {
-    @include breakpoint-between(0, $md) {
+    @include breakpoint-down {
       content: '\02795';
       font-size: 0.75rem;
+      color: $colour-primary-400;
       float: right;
       height: 14px;
       padding: 4px 0 4px 3px;
@@ -92,7 +83,7 @@
       }
     }
     &:after {
-      @include breakpoint-between(0, $md) {
+      @include breakpoint-down {
         content: "\2796";
       }
       @include breakpoint-up {
@@ -131,7 +122,7 @@
 }
 
 .accordion__description {
-  @include breakpoint-between(0, $md) {
+  @include breakpoint-down {
     display: none;
   }
   @include breakpoint-up {

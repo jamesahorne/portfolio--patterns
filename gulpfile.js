@@ -2,7 +2,7 @@
 
 // Configuration.
 
-var config = {};
+const config = {};
 config.source = './source';
 config.patternLab = {
   dir: './public',
@@ -57,29 +57,27 @@ config.js = {
 // Load Gulp and other tools.
 
 // Allows access to the file system
-var fs = require('fs');
+const fs = require('fs');
 // Allows browser refresh and syncing
-var browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 // Allows running of gulp tasks
-var gulp = require('gulp');
+const gulp = require('gulp');
 // Allows run of php command from gulp
-var run = require('gulp-run');
+const run = require('gulp-run');
 // Allows the compilation of scss files to css
-var sass = require('gulp-sass');
+const sass = require('gulp-sass');
 // Allows the importing of wildcard scss routes
-var sassGlob = require('gulp-sass-glob');
+const sassGlob = require('gulp-sass-glob');
 // Allows the linting of scss files
-var sassLint = require('gulp-sass-lint');
+const sassLint = require('gulp-sass-lint');
 // Allows the building of sourcemaps
-var sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
 
-var cleanCSS = require('gulp-clean-css');
-var size = require('gulp-size');
-var rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const size = require('gulp-size');
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
 
-// var pattern_config = require('./patternlab-config.json');
-// var patternlab = require('@pattern-lab/core')(pattern_config);
 
 // Helper functions.
 

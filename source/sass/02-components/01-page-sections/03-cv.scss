@@ -1,5 +1,5 @@
 .cv {
-  font-family: 'Montserrat', sans-serif;
+  @include font-tertiary;
   color: $colour-black-500;
   font-size: $cv-fs-sm;
   position: relative;
@@ -63,15 +63,14 @@
 
 .cv__title,
 .cv__subtitle {
-  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.03rem;
+  letter-spacing: $letter-spacing;
   text-align: center;
   line-height: $line-height-sm;
 }
 
 .cv__title {
-  font-weight: 300;
+  font-weight: $font-weight-light;
   font-size: $cv-fs-xl;
   margin-bottom: 0.25rem;
   @include breakpoint-up($sm) {
@@ -81,7 +80,8 @@
 
 .cv__subtitle {
   font-size: $cv-fs-lg;
-  color: $colour-black-300;
+  font-weight: $font-weight-normal;
+  color: $colour-black-400;
 }
 
 .cv__layout {
@@ -111,7 +111,7 @@
   grid-area: secondary;
   > * {
     @include cv-border(bottom);
-    @include breakpoint-between(0, $sm) {
+    @include breakpoint-down($sm) {
       &:last-child {
         margin-bottom: 0;
         padding-bottom: 0;
@@ -129,26 +129,27 @@
   }
 }
 
-.cv__heading-1 {
-  font-family: 'Raleway', sans-serif;
+.cv__heading-1,
+.cv__heading-2 {
+  @include font-secondary;
   font-size: $cv-fs-md;
-  font-weight: 600;
+}
+.cv__heading-1 {
+  font-weight: $font-weight-semi-bold;
   margin-bottom: 0.5rem;
   color: $colour-primary-500;
   line-height: $line-height-sm;
 }
 
 .cv__heading-2 {
-  font-family: 'Raleway', sans-serif;
-  font-size: $cv-fs-md;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
   line-height: $line-height-sm;
 }
 
 .cv__heading-3 {
   font-size: $cv-fs-xs;
-  font-weight: 400;
-  color: $colour-black-300;
+  font-weight: $font-weight-normal;
+  color: $colour-black-400;
   margin-bottom: 0.375rem;
 }
 
@@ -183,7 +184,7 @@
     }
   }
   &--skills {
-    @include breakpoint-up(23.4) {
+    @include breakpoint-up($breakpoint-iphone) {
       column-count: 2;
     }
     @include breakpoint-up($sm) {
@@ -201,7 +202,7 @@
       &:before {
         content: "\2022";
         color: $colour-primary-400;
-        font-weight: bold;
+        font-weight: $font-weight-bold;
         font-size: $cv-fs-md;
         display: inline-block;
         width: 1rem;
@@ -232,6 +233,12 @@
 .cv__portfolio {
   &:before {
     background-image: url('/images/cv/icon-portfolio.svg');
+  }
+}
+
+.cv__linked-in {
+  &:before {
+    background-image: url('/images/cv/icon-linked-in.svg');
   }
 }
 
@@ -288,16 +295,9 @@
 }
 
 .cv__date {
-  display: block;
   font-size: $cv-fs-xs;
-  font-weight: 400;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  @include breakpoint-up($sm) {
-    display: inline;
-    margin-top: 0;
-    float: right;
-  }
+  font-weight: $font-weight-normal;
+  float: right;
 }
 
 // Fancy corners

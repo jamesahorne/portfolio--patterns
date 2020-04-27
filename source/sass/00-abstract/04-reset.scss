@@ -2,11 +2,13 @@
 	box-sizing: border-box;
 }
 
-blockquote, body, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, ol, p, pre, ul {
+// blockquote, body, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, ol, p, pre, ul {
+body, figure, h1, h2, h3, h4, h5, p, ul {
   margin: 0;
 }
 
-fieldset, legend, ol, ul {
+// fieldset, legend, ol, ul {
+ul {
 	padding: 0;
 }
 
@@ -28,6 +30,7 @@ li {
 	display: block;
 }
 
-input, textarea, button {
+// input, textarea, button {
+button {
 	font: inherit;
 }

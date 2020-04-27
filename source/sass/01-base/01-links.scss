@@ -1,21 +1,5 @@
 .u-link {
 	@include u-link;
-	&--invert-\@md {
-		@include breakpoint-up {
-			color: $colour-white;
-			&:hover,
-			&:focus,
-			&:active {
-				color: $colour-white;
-			}
-			&:after {
-				background-color: $colour-secondary-400;
-			}
-			&:visited {
-				color: $colour-white;
-			}
-		}
-	}
 	&--cv {
     &:hover,
     &:focus,

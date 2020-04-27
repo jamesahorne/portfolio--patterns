@@ -1,16 +1,23 @@
 // Breakpoints
-@mixin breakpoint-up($breakpoint: $md) {
-  @media (min-width: #{$breakpoint}rem) {
+@mixin breakpoint-up($breakpoint-min: $md) {
+  @media (min-width: #{$breakpoint-min}rem) {
     @content;
   }
 }
+
+@mixin breakpoint-down($breakpoint-max: $md) {
+  @media (max-width: #{$breakpoint-max - 0.001}rem) {
+    @content;
+  }
+}
+
 @mixin breakpoint-between($breakpoint-min, $breakpoint-max) {
   @media (min-width: #{$breakpoint-min}rem) and (max-width: #{$breakpoint-max - 0.001}rem) {
     @content;
   }
 }
 
-// Fonts
+// Fonts/Text
 @mixin font-sizing-default {
   font-size: fontSize(0);
   @include breakpoint-up {
@@ -22,9 +29,16 @@
   font-family: 'Open Sans', sans-serif, Arial;
 }
 
-@mixin font-secondary($level: 1) {
-  font-family: 'Baloo 2', sans-serif, Arial;
-  font-weight: 500;
+@mixin font-secondary {
+  font-family: 'Raleway', sans-serif, Arial;
+}
+
+@mixin font-tertiary {
+  font-family: 'Montserrat', sans-serif, Arial;
+}
+
+@mixin heading($level: 1) {
+  font-weight: $font-weight-medium;
   @if $level == 2 {
     font-size: fontSize(1);
     margin: 1.5rem 0 0.75rem;
@@ -47,11 +61,6 @@
       margin: 2.5rem 0 1.25rem;
     }
   }
-}
-
-@mixin font-logo {
-  font-family: 'Lalezar', sans-serif, Arial;
-  letter-spacing: $letter-spacing;
 }
 
 // Transitions

@@ -1,13 +1,16 @@
 .u-heading-1  {
-  @include font-secondary(1);
+  @include font-secondary;
+  @include heading;
 }
 
-.u-heading-2  {
-  @include font-secondary(2);
-}
+// .u-heading-2  {
+//   @include font-secondary;
+//   @include heading(2);
+// }
 
 .u-heading-3  {
-  @include font-secondary(3);
+  @include font-secondary;
+  @include heading(3);
   &--center {
     text-align: center;
   }
@@ -16,7 +19,7 @@
 .u-text {
   margin-bottom: 0.75rem;
   &--center {
-    @include breakpoint-between(0, $md) {
+    @include breakpoint-down {
       text-align: center;
     }
   }
@@ -25,6 +28,11 @@
     margin: 3rem 0.5rem 0 -0.5rem;
     padding: 0 0.5rem 1rem;
     position: relative;
+    @include breakpoint-up($sm) {
+      width: calc(100% + 2rem);
+      margin: 3rem 1rem 0.5rem -1rem;
+      padding: 0 1rem 1rem;
+    }
     @include breakpoint-up {
       width: calc(100% + 4rem);
       margin: 5rem 2rem 0 -2rem;
