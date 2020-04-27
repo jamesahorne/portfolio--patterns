@@ -56,11 +56,6 @@
   }
 }
 
-@mixin font-logo {
-  font-family: 'Lalezar', sans-serif, Arial;
-  letter-spacing: $letter-spacing;
-}
-
 // Transitions
 @mixin header-link-transition($bottom: -10) {
   position: relative;

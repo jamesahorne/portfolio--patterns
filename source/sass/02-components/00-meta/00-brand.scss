@@ -1,5 +1,5 @@
 .brand {
-  @include font-logo;
+  letter-spacing: $letter-spacing;
 }
 
 .brand__link {
