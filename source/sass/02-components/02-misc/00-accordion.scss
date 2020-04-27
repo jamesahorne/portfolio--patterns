@@ -49,7 +49,9 @@
   @include breakpoint-down {
     text-align: left;
   }
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: $colour-primary-500;
   }
   &:after {
