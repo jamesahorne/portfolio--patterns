@@ -17,7 +17,7 @@
   }
 }
 
-// Fonts
+// Fonts/Text
 @mixin font-sizing-default {
   font-size: fontSize(0);
   @include breakpoint-up {
@@ -29,8 +29,11 @@
   font-family: 'Open Sans', sans-serif, Arial;
 }
 
-@mixin font-secondary($level: 1) {
+@mixin font-secondary {
   font-family: 'Raleway', sans-serif, Arial;
+}
+
+@mixin heading($level: 1) {
   font-weight: $font-weight-medium;
   @if $level == 2 {
     font-size: fontSize(1);
