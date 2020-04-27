@@ -33,6 +33,10 @@
   font-family: 'Raleway', sans-serif, Arial;
 }
 
+@mixin font-tertiary {
+  font-family: 'Montserrat', sans-serif, Arial;
+}
+
 @mixin heading($level: 1) {
   font-weight: $font-weight-medium;
   @if $level == 2 {
