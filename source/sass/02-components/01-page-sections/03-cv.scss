@@ -1,5 +1,5 @@
 .cv {
-  font-family: 'Montserrat', sans-serif;
+  @include font-tertiary;
   color: $colour-black-500;
   font-size: $cv-fs-sm;
   position: relative;
@@ -64,13 +64,13 @@
 .cv__title,
 .cv__subtitle {
   text-transform: uppercase;
-  letter-spacing: 0.03rem;
+  letter-spacing: $letter-spacing;
   text-align: center;
   line-height: $line-height-sm;
 }
 
 .cv__title {
-  font-weight: $font-weight-thin;
+  font-weight: $font-weight-light;
   font-size: $cv-fs-xl;
   margin-bottom: 0.25rem;
   @include breakpoint-up($sm) {
@@ -129,9 +129,12 @@
   }
 }
 
-.cv__heading-1 {
-  font-family: 'Raleway', sans-serif;
+.cv__heading-1,
+.cv__heading-2 {
+  @include font-secondary;
   font-size: $cv-fs-md;
+}
+.cv__heading-1 {
   font-weight: $font-weight-semi-bold;
   margin-bottom: 0.5rem;
   color: $colour-primary-500;
@@ -139,8 +142,6 @@
 }
 
 .cv__heading-2 {
-  font-family: 'Raleway', sans-serif;
-  font-size: $cv-fs-md;
   font-weight: $font-weight-medium;
   line-height: $line-height-sm;
 }
