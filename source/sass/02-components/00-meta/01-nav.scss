@@ -12,6 +12,7 @@
   }
   @include breakpoint-up($sm) {
     font-size: fontSize(2);
+    font-weight: $font-weight-light;
   }
   @include breakpoint-up($lg) {
     font-size: fontSize(3);
