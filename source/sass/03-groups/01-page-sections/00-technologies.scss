@@ -12,14 +12,19 @@
   }
   &:after {
     content: '';
-    width: calc((4rem + 8vw) / 2);
-    height: calc(4rem + 8vw);
+    width: calc(1rem + 6vw);
+    height: calc(2rem + 12vw);
     position: absolute;
-    bottom: -8rem;
+    bottom: calc(-5rem - 4vw);
     right: 0;
     border: 0.1875rem solid $colour-secondary-400;
     border-right: none;
     border-radius: calc(100% + 75rem) 0 0 calc(100% + 75rem);
+    @include breakpoint-up($xl) {
+      width: 5.5rem;
+      height: 11rem;
+      bottom: -8rem;
+    }
   }
 }
 
