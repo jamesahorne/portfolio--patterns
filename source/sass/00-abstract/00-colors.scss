@@ -6,28 +6,28 @@
 //  50: colour-100, opacity 0.2
 
 // White
-$colour-white: #fcfcfc;
+$colour-white: hsl(0, 0%, 99%);
 
 // Black
-$colour-black-50:  rgba(214, 214, 214, 0.2);
-$colour-black-100: #d6d6d6;
-$colour-black-300: #858585;
-$colour-black-400: #5c5c5c;
-$colour-black-500: #333333;
-$colour-black-600: #000000;
+$colour-black-50:  hsl(0, 0%, 95%);
+$colour-black-100: hsl(0, 0%, 76.25%);
+$colour-black-300: hsl(0, 0%, 57.5%);
+$colour-black-400: hsl(0, 0%, 38.75%);
+$colour-black-500: hsl(0, 0%, 20%);
+$colour-black-600: hsl(0, 0%, 5%);
 
 // Primary
-$colour-primary-50:  rgba(212, 224, 253, 0.2);
-$colour-primary-100: #d4e0fd;
-$colour-primary-300: #7fa3f9;
-$colour-primary-400: #5584F6;
-$colour-primary-500: #2765f5;
-$colour-primary-600: #114ad0;
+$colour-primary-50:  hsl(222, 90%, 95%);
+$colour-primary-100: hsl(222, 90%, 85%);
+$colour-primary-300: hsl(222, 90%, 75%);
+$colour-primary-400: hsl(222, 90%, 65%);
+$colour-primary-500: hsl(222, 90%, 55%);
+$colour-primary-600: hsl(222, 90%, 45%);
 
 // Secondary
-$colour-secondary-50:  rgba(253, 217, 215, 0.2);
-$colour-secondary-100: #fdd9d7;
-$colour-secondary-300: #f88e87;
-$colour-secondary-400: #f4695e;
-$colour-secondary-500: #f44336;
-$colour-secondary-600: #d22518;
+$colour-secondary-50:  hsl(4, 90%, 95%);
+$colour-secondary-100: hsl(4, 90%, 85%);
+$colour-secondary-300: hsl(4, 90%, 75%);
+$colour-secondary-400: hsl(4, 90%, 65%);
+$colour-secondary-500: hsl(4, 90%, 55%);
+$colour-secondary-600: hsl(4, 90%, 45%);
