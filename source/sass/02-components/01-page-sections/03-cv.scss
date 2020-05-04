@@ -50,10 +50,13 @@
   margin-top: 2rem;
   @include breakpoint-up($sm) {
     position: relative;
-    max-width: 40.625rem;
-    min-height: 891px;
+    max-width: $cv-width;
+    min-height: $cv-height;
     margin: 4rem auto 0;
     padding: 2rem;
+  }
+  @include breakpoint-up(43.375) {
+    max-height: $cv-height;
   }
 }
 
@@ -88,7 +91,7 @@
   @include breakpoint-up($sm) {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 2.5rem;
+    column-gap: 2rem;
     grid-template-areas:
       'secondary primary'
     ;
