@@ -102,9 +102,9 @@
   @if $alignment == 'top' {
     margin-#{$alignment}: 0.5rem;
   } @else {
-    margin-#{$alignment}: 1.5rem;
+    margin-#{$alignment}: 1rem;
   }
-  padding-#{$alignment}: 1.5rem;
+  padding-#{$alignment}: 1rem;
 }
 
 // Links
