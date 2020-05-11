@@ -3,96 +3,132 @@
     <h2 class="u-heading-1">Wanna see my CV?</h2>
     <div class="cv__main">
       <header class="cv__header">
-        <h3 class="cv__title">Candidate Name</h3>
-        <h3 class="cv__subtitle">Application Job Role</h3>
+        <h3 class="cv__title">James Horne</h3>
+        <h3 class="cv__subtitle">Front-End Developer</h3>
       </header>
       <div class="cv__layout">
         <section class="cv__primary">
           <article class="cv__section cv__section--summary">
-            <h4 class="cv__heading-1">Section</h4>
+            <h4 class="cv__heading-1">Summary</h4>
             <div class="cv__content">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse nisi minus dolorem error voluptate tenetur minima asperiores facere magni quos.</p>
+              <p>Driven and enthusiastic front-end developer with a desire to deliver a high-quality front-end, looking to gain experience and keep learning and growing.</p>
+            </div>
+          </article>
+          <article class="cv__section cv__section--projects">
+            <h3 class="cv__heading-1">Projects</h3>
+            <div class="cv__content">
+              <ul class="cv__list cv__list--bullets">
+                {{#projects}}
+                <li>{{ item }}</li>
+                {{/projects}}
+              </ul>
             </div>
           </article>
           <article class="cv__section cv__section--experience">
-            <h4 class="cv__heading-1">Section</h4>
+            <h4 class="cv__heading-1">Experience</h4>
             <div class="cv__content">
+              {{#experiences}}
               <article class="cv__experience-block">
                 <h4 class="cv__heading-2">
-                  Job Title
-                  <span class="cv__date">Jan 19 - Jan 20</span>
+                  {{ title }}
+                  <span class="cv__date">
+                    {{ startDate}} -
+                    {{#endDate}}
+                    {{ . }}
+                    {{/endDate}}
+                    {{^endDate}}
+                    present
+                    {{/endDate}}
+                  </span>
                 </h4>
-                <h5 class="cv__heading-3">Daughter</h5>
-                <p>A summary of what I did at the company.</p>
+                <h5 class="cv__heading-3">{{ company }}</h5>
+                <p>{{ description }}</p>
                 <ul class="cv__list cv__list--bullets">
-                  <li>Lorem ipsum dolor sit amet.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet.</li>
+                  {{#details}}
+                  <li>{{ item }}</li>
+                  {{/details}}
                 </ul>
               </article>
-            </div>
-          </article>
-          <article class="cv__section cv__section--skills">
-            <h4 class="cv__heading-1">Section</h4>
-            <div class="cv__content">
-              <ul class="cv__list cv__list--skills">
-                <li>A skill <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                <li>A skill <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                <li>A skill <span class="cv__star">&#9733; &#9733; &#9733;</span></li>
-                <li>A skill <span class="cv__star">&#9733; &#9733; &#9733;</span></li>
-                <li>A skill <span class="cv__star">&#9733; &#9733;</span></li>
-                <li>A skill <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                <li>A skill <span class="cv__star">&#9733; &#9733; &#9733; &#9733;</span></li>
-                <li>A skill <span class="cv__star">&#9733; &#9733; &#9733;</span></li>
-              </ul>
+              {{/experiences}}
             </div>
           </article>
         </section>
         <section class="cv__secondary">
           <aside class="cv__section cv__section--contact">
-            <h4 class="cv__heading-1">Section</h4>
+            <h4 class="cv__heading-1">Contact</h4>
             <div class="cv__content">
-              <ul class="cv__list cv__list--icons cv__list--big">
-                <li class="cv__portfolio"><a class="u-link u-link--cv" href="https://www.jamesahorne.dev">A link somewhere</a></li>
-                <li class="cv__linked-in"><a class="u-link u-link--cv" href="https://www.jamesahorne.dev">A link somewhere</a></li>
-                <li class="cv__github"><a class="u-link u-link--cv" href="https://www.jamesahorne.dev">A link somewhere</a></li>
-                <li class="cv__email"><a class="u-link u-link--cv" href="mailto:james99h39@gmail.com">email@address.com</a></li>
-                <li class="cv__phone">01234 567890</li>
+              <ul class="cv__list cv__list--icons">
+                <li class="cv__portfolio"><a class="u-link u-link--cv" href="https://www.jamesahorne.dev">www.jamesahorne.dev</a></li>
+                <li class="cv__linked-in"><a class="u-link u-link--cv" href="https://www.linkedin.com/in/jamesahorne/">jamesahorne</a></li>
+                <li class="cv__github"><a class="u-link u-link--cv" href="https://github.com/jamesahorne/">jamesahorne</a></li>
+                <li class="cv__email"><a class="u-link u-link--cv" href="mailto:james99h39@gmail.com">james99h39@gmail.com</a></li>
+                <li class="cv__phone">07531 180950</li>
               </ul>
             </div>
           </aside>
-          <article class="cv__section cv__section--education">
-            <h4 class="cv__heading-1">Section</h4>
+          <article class="cv__section cv__section--skills">
+            <h4 class="cv__heading-1">Skills</h4>
             <div class="cv__content">
-              <ul class="cv__list">
-                <li>Qualification Type</li>
-                <li class="cv__sublist">
-                  Qualification Type
-                  <ul>
-                    <li>Qualification</li>
-                    <li>Qualification</li>
-                    <li>Qualification</li>
-                  </ul>
+              <ul class="cv__list cv__list--skills">
+                {{#skills}}
+                <li>
+                  {{ item }}
+                  <div class="cv__star">
+
+
+
+                    {{!
+                      Logic-less Mustache has no way to iterate through a number
+                      e.g. if starNumber == 2
+                      So have to do it this way
+                    }}
+
+                    {{#starNumber2}}
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    {{/starNumber2}}
+
+                    {{#starNumber3}}
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    {{/starNumber3}}
+
+                    {{#starNumber4}}
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    {{/starNumber4}}
+
+
+
+                  </div>
                 </li>
-                <li class="cv__sublist">
-                  Qualification Type
-                  <ul>
-                    <li>Qualification</li>
-                    <li>Qualification</li>
-                  </ul>
-                </li>
+                {{/skills}}
               </ul>
             </div>
           </article>
-          <article class="cv__section cv__section--interests">
-            <h4 class="cv__heading-1">Section</h4>
+          <article class="cv__section cv__section--education">
+            <h4 class="cv__heading-1">Education</h4>
             <div class="cv__content">
-              <ul class="cv__list cv__list--icons">
-                <li class="cv__music">An interest to do with the icon (music).</li>
-                <li class="cv__fitness">An interest to do with the icon (fitness).</li>
+              <ul class="cv__list">
+                <li>Diploma in Software Development</li>
+                <li class="cv__sublist">
+                  A Levels
+                  <ul>
+                    <li>A (maths)</li>
+                    <li>B (further maths)</li>
+                    <li>C (biology)</li>
+                  </ul>
+                </li>
+                <li class="cv__sublist">
+                  GCSEs
+                  <ul>
+                    <li>7 As</li>
+                    <li>4 Bs</li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </article>
