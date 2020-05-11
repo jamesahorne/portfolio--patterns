@@ -48,15 +48,16 @@
 
 .cv__main {
   margin-top: 2rem;
+  padding: 0 0 1rem;
   @include breakpoint-up($sm) {
     position: relative;
     max-width: $cv-width;
-    min-height: $cv-height;
     margin: 4rem auto 0;
-    padding: 2rem;
+    padding: 2rem 0;
   }
   @include breakpoint-up(43.375) {
-    max-height: $cv-height;
+    height: $cv-height;
+    padding: 2rem;
   }
 }
 
@@ -74,8 +75,8 @@
 
 .cv__title {
   font-weight: $font-weight-light;
-  font-size: $cv-fs-xl;
   margin-bottom: 0.25rem;
+  font-size: $cv-fs-xl;
   @include breakpoint-up($sm) {
     font-size: $cv-fs-xxl;
   }
@@ -136,17 +137,17 @@
 .cv__heading-2 {
   @include font-secondary;
   font-size: $cv-fs-md;
+  line-height: $line-height-sm;
 }
+
 .cv__heading-1 {
   font-weight: $font-weight-semi-bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   color: $colour-primary-500;
-  line-height: $line-height-sm;
 }
 
 .cv__heading-2 {
   font-weight: $font-weight-medium;
-  line-height: $line-height-sm;
 }
 
 .cv__heading-3 {
@@ -161,16 +162,12 @@
 }
 
 .cv__list {
-  li {
-    display: block;
-    margin-bottom: 0.375rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  line-height: 1.45;
+
   &--icons {
     margin-left: -0.5rem;
     padding-left: 1.5rem;
+
     li {
       position: relative;
       &:before {
@@ -193,19 +190,16 @@
     @include breakpoint-up($sm) {
       column-count: 1;
     }
-    @include breakpoint-up(42.5) {
-      column-count: 2;
-    }
   }
   &--bullets {
     margin-top: 0.25rem;
+
     li {
       position: relative;
       padding-left: 1.25rem;
       &:before {
         content: "\2022";
         color: $colour-primary-400;
-        font-weight: $font-weight-bold;
         font-size: $cv-fs-md;
         display: inline-block;
         width: 1rem;
@@ -213,6 +207,14 @@
         top: 0;
         left: 0.25rem;
       }
+    }
+  }
+
+  li {
+    display: block;
+    margin-bottom: 0.375rem;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -263,18 +265,6 @@
   }
 }
 
-.cv__music {
-  &:before {
-    background-image: url('/images/cv/icon-music.svg');
-  }
-}
-
-.cv__fitness {
-  &:before {
-    background-image: url('/images/cv/icon-fitness.svg');
-  }
-}
-
 .cv__experience-block {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
@@ -308,7 +298,7 @@
 .cv__header,
 .cv__layout,
 .cv__primary {
-  @include breakpoint-up($sm) {
+  @include breakpoint-up($md) {
     &:before,
     &:after {
       content: '';
@@ -324,114 +314,114 @@
 }
 
 .cv__main {
-  @include breakpoint-up($sm) {
+  @include breakpoint-up($md) {
+    &:before {
+      transform: translateX(-50%) rotate(0deg);
+      left: 2px;
+      top: -3px;
+    }
+    &:after {
+      transform: translateX(-50%) rotate(90deg);
+      left: -2px;
+      top: 1px;
+    }
     &:hover,
     &:focus-within,
     &:active {
       &:before {
         transform: translateX(-50%) rotate(40deg);
-        left: 0;
-        top: 0;
+        left: -2px;
+        top: -3px;
       }
       &:after {
         transform: translateX(-50%) rotate(140deg);
-        left: 0;
-        top: 0;
+        left: -2px;
+        top: -3px;
       }
 
       .cv__header {
         &:before {
           transform: translateX(-50%) rotate(40deg);
-          right: 0;
-          top: 0;
+          right: -12px;
+          top: -3px;
         }
         &:after {
           transform: translateX(-50%) rotate(140deg);
-          right: 0;
-          top: 0;
+          right: -12px;
+          top: -3px;
         }
       }
       
       .cv__layout {
         &:before {
           transform: translateX(-50%) rotate(40deg);
-          left: 0;
-          bottom: 0;
+          left: -2px;
+          bottom: -3px;
         }
         &:after {
           transform: translateX(-50%) rotate(140deg);
-          left: 0;
-          bottom: 0;
+          left: -2px;
+          bottom: -3px;
         }
       }
       
       .cv__primary {
         &:before {
           transform: translateX(-50%) rotate(40deg);
-          right: 0;
-          bottom: 0;
+          right: -12px;
+          bottom: -3px;
         }
         &:after {
           transform: translateX(-50%) rotate(140deg);
-          right: 0;
-          bottom: 0;
+          right: -12px;
+          bottom: -3px;
         }
       }
-    }
-    &:before {
-      transform: translateX(-50%) rotate(0deg);
-      left: 4px;
-      top: 0;
-    }
-    &:after {
-      transform: translateX(-50%) rotate(90deg);
-      left: 0;
-      top: 4px;
     }
   }
 }
 
 .cv__header {
-  @include breakpoint-up($sm) {
+  @include breakpoint-up($md) {
     &:before {
       transform: translateX(-50%) rotate(0deg);
-      right: 4px;
-      top: 0;
+      right: -8px;
+      top: -3px;
     }
     &:after {
       transform: translateX(-50%) rotate(90deg);
-      right: 0;
-      top: 4px;
+      right: -12px;
+      top: 1px;
     }
   }
 }
 
 .cv__layout {
-  @include breakpoint-up($sm) {
+  @include breakpoint-up($md) {
     &:before {
       transform: translateX(-50%) rotate(0deg);
-      left: 4px;
-      bottom: 0;
+      left: 2px;
+      bottom: -3px;
     }
     &:after {
       transform: translateX(-50%) rotate(90deg);
-      left: 0;
-      bottom: 4px;
+      left: -2px;
+      bottom: 1px;
     }
   }
 }
 
 .cv__primary {
-  @include breakpoint-up($sm) {
+  @include breakpoint-up($md) {
     &:before {
       transform: translateX(-50%) rotate(0deg);
-      right: 4px;
-      bottom: 0;
+      right: -8px;
+      bottom: -3px;
     }
     &:after {
       transform: translateX(-50%) rotate(90deg);
-      right: 0;
-      bottom: 4px;
+      right: -12px;
+      bottom: 1px;
     }
   }
 }
