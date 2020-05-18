@@ -1,26 +1,26 @@
 {
   "items": [
-      {"name": "$colour-white", "value": "#fcfcfc"},
+      {"name": "$colour-white", "value": "hsl(0, 0%, 99%)"},
 
-      {"name": "$colour-black-50",  "value": "rgba(214, 214, 214, 0.2)"},
-      {"name": "$colour-black-100", "value": "#d6d6d6"},
-      {"name": "$colour-black-300", "value": "#858585"},
-      {"name": "$colour-black-400", "value": "#5c5c5c"},
-      {"name": "$colour-black-500", "value": "#333333"},
-      {"name": "$colour-black-600", "value": "#000000"},
+      {"name": "$colour-black-50",  "value": "hsl(0, 0%, 95%)"},
+      {"name": "$colour-black-100", "value": "hsl(0, 0%, 76.25%)"},
+      {"name": "$colour-black-300", "value": "hsl(0, 0%, 57.5%)"},
+      {"name": "$colour-black-400", "value": "hsl(0, 0%, 38.75%)"},
+      {"name": "$colour-black-500", "value": "hsl(0, 0%, 20%)"},
+      {"name": "$colour-black-600", "value": "hsl(0, 0%, 5%)"},
 
-      {"name": "$colour-primary-50",  "value": "rgba(212, 224, 253, 0.2)"},
-      {"name": "$colour-primary-100", "value": "#d4e0fd"},
-      {"name": "$colour-primary-300", "value": "#7fa3f9"},
-      {"name": "$colour-primary-400", "value": "#5584F6"},
-      {"name": "$colour-primary-500", "value": "#2765f5"},
-      {"name": "$colour-primary-600", "value": "#114ad0"},
+      {"name": "$colour-primary-50",  "value": "hsl(222, 90%, 95%)"},
+      {"name": "$colour-primary-100", "value": "hsl(222, 90%, 85%)"},
+      {"name": "$colour-primary-300", "value": "hsl(222, 90%, 75%)"},
+      {"name": "$colour-primary-400", "value": "hsl(222, 90%, 65%)"},
+      {"name": "$colour-primary-500", "value": "hsl(222, 90%, 55%)"},
+      {"name": "$colour-primary-600", "value": "hsl(222, 90%, 45%)"},
 
-      {"name": "$colour-secondary-50", "value": "rgba(253, 217, 215, 0.2)"},
-      {"name": "$colour-secondary-100", "value": "#fdd9d7"},
-      {"name": "$colour-secondary-300", "value": "#f88e87"},
-      {"name": "$colour-secondary-400", "value": "#f4695e"},
-      {"name": "$colour-secondary-500", "value": "#f44336"},
-      {"name": "$colour-secondary-600", "value": "#d22518"}
+      {"name": "$colour-secondary-50", "value":  "hsl(4, 90%, 95%)"},
+      {"name": "$colour-secondary-100", "value": "hsl(4, 90%, 85%)"},
+      {"name": "$colour-secondary-300", "value": "hsl(4, 90%, 75%)"},
+      {"name": "$colour-secondary-400", "value": "hsl(4, 90%, 65%)"},
+      {"name": "$colour-secondary-500", "value": "hsl(4, 90%, 55%)"},
+      {"name": "$colour-secondary-600", "value": "hsl(4, 90%, 45%)"}
   ]
 }

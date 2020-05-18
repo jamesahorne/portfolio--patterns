@@ -1,0 +1,94 @@
+{
+  "projects": [
+    {
+      "id": "Date.now()",
+      "item": "My portfolio site is made with Vue, which I use for list rendering and passing data with props"
+    },
+    {
+      "id": "Date.now()",
+      "item": "I built a todo app in Vue, with full CRUD functionality"
+    },
+    {
+      "id": "Date.now()",
+      "item": "I made a pattern library for my portfolio site with Pattern Lab. I also used Gulp and Browsersync"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "Date.now()",
+      "title": "Web developer",
+      "company": "Daughter",
+      "startDate": "Sep 19",
+      "endDate": "Mar 20",
+      "description": "Front-end builds, usually in the form of a pattern library.",
+      "details": [
+        {
+          "id": "Date.now()",
+          "item": "Lead small and medium-size projects"
+        },
+        {
+          "id": "Date.now() + 1",
+          "item": "Build and maintain pattern libraries"
+        },
+        {
+          "id": "Date.now() + 2",
+          "item": "Support and liaise with clients"
+        },
+        {
+          "id": "Date.now() + 3",
+          "item": "Agile development"
+        },
+        {
+          "id": "Date.now() + 4",
+          "item": "Introduce use of CSS Grid"
+        },
+        {
+          "id": "Date.now() + 5",
+          "item": "Using Trello and Jira for project management"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "Date.now()",
+      "item": "HTML5",
+      "starNumber4": 4
+    },
+    {
+      "id": "Date.now() + 1",
+      "item": "CSS3",
+      "starNumber4": 4
+    },
+    {
+      "id": "Date.now() + 2",
+      "item": "Mobile-first",
+      "starNumber4": 4
+    },
+    {
+      "id": "Date.now() + 3",
+      "item": "JavaScript",
+      "starNumber3": 3
+    },
+    {
+      "id": "Date.now() + 4",
+      "item": "SASS (SCSS)",
+      "starNumber3": 3
+    },
+    {
+      "id": "Date.now() + 5",
+      "item": "Git",
+      "starNumber3": 3
+    },
+    {
+      "id": "Date.now() + 6",
+      "item": "Vue.js",
+      "starNumber2": 2
+    },
+    {
+      "id": "Date.now() + 7",
+      "item": "jQuery",
+      "starNumber2": 2
+    }
+  ]
+}
