@@ -25,8 +25,8 @@
     "@pattern-lab/cli": "^5.7.0",
     "@pattern-lab/core": "^5.7.0",
     "@pattern-lab/engine-handlebars": "^5.5.0",
-    "@pattern-lab/starterkit-handlebars-vanilla": "^1.4.0",
-    "@pattern-lab/uikit-workshop": "^5.7.2"
+    "@pattern-lab/starterkit-handlebars-vanilla": "^1.4.3",
+    "@pattern-lab/uikit-workshop": "^5.17.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
